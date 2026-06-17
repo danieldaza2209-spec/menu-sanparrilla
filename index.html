@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Parrilla - Nuestro Menú</title>
+    <!-- Google Fonts: Outfit (headings) & Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="app-header">
+        <div class="header-container">
+            <div class="brand">
+                <i data-lucide="flame" class="icon-brand"></i>
+                <span class="brand-name">San <span class="accent">Parrilla</span></span>
+            </div>
+            <nav class="nav-links">
+                <a href="#menu-del-dia" class="nav-link">Especiales de Hoy</a>
+                <a href="#nuestro-menu" class="nav-link">Nuestro Menú</a>
+                <a href="#picadas" class="nav-link">Picadas</a>
+            </nav>
+            <div class="header-contact">
+                <a href="https://wa.me/573023305158" target="_blank" class="whatsapp-btn">
+                    <i data-lucide="phone"></i> <span>Pedir por WhatsApp</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <span class="badge">🔥 TRADICIÓN & SABOR AL CARBÓN</span>
+                <h1>Restaurante San Parrilla</h1>
+                <p>Arma tu plato favorito con nuestra variedad de carnes, pescados y acompañamientos.</p>
+            </div>
+        </section>
+
+        <!-- SECTION 1: MENÚ DEL DÍA (SOPA, PRINCIPIO Y ACOMPAÑAMIENTOS) -->
+        <section id="menu-del-dia" class="menu-del-dia-section container">
+            <div class="section-title-wrap">
+                <span class="subtitle">Acompaña tu Proteína</span>
+                <h2>Especiales de Hoy</h2>
+                <p>Todos los platos fuertes del menú incluyen la sopa, principio y acompañamiento del día.</p>
+            </div>
+            
+            <div class="daily-specials-grid">
+                <!-- Sopa Card -->
+                <div class="special-card soup-card">
+                    <div class="card-icon-header">
+                        <i data-lucide="soup" class="special-icon"></i>
+                    </div>
+                    <div class="special-card-body">
+                        <h3>SOPA DEL DÍA</h3>
+                        <div class="special-highlight" id="daily-soup-display">Plátano</div>
+                        <p class="special-desc">Con el sabor casero tradicional de nuestro fogón.</p>
+                    </div>
+                </div>
+
+                <!-- Principio Card -->
+                <div class="special-card principle-card">
+                    <div class="card-icon-header">
+                        <i data-lucide="beef" class="special-icon"></i>
+                    </div>
+                    <div class="special-card-body">
+                        <h3>PRINCIPIOS</h3>
+                        <ul class="special-list" id="daily-principles-display">
+                            <li>
+                                <i data-lucide="check" class="check-icon"></i>
+                                <span>Espaguetis napolitanos</span>
+                            </li>
+                            <li>
+                                <i data-lucide="check" class="check-icon"></i>
+                                <span>Verduras en crema de leche</span>
+                            </li>
+                            <li>
+                                <i data-lucide="check" class="check-icon"></i>
+                                <span>Frijoles caseros</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Acompañamientos Card -->
+                <div class="special-card side-card">
+                    <div class="card-icon-header">
+                        <i data-lucide="salad" class="special-icon"></i>
+                    </div>
+                    <div class="special-card-body">
+                        <h3>ACOMPAÑAMIENTOS</h3>
+                        <ul class="special-list" id="daily-sides-display">
+                            <li>
+                                <i data-lucide="check" class="check-icon"></i>
+                                <span>Arepuelas</span>
+                            </li>
+                            <li>
+                                <i data-lucide="check" class="check-icon"></i>
+                                <span>Maduro pícaro</span>
+                            </li>
+                            <li>
+                                <i data-lucide="check" class="check-icon"></i>
+                                <span>Tajadas maduras</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: NUESTRO MENÚ (8 PRICE CATEGORIES) -->
+        <section id="nuestro-menu" class="nuestro-menu-section container">
+            <div class="section-title-wrap">
+                <span class="subtitle">Elige tu Proteína</span>
+                <h2>Nuestro Menú</h2>
+                <p>Selecciona tu plato fuerte. Los precios corresponden a la categoría de la proteína elegida.</p>
+            </div>
+
+            <div class="menu-price-grid">
+                <!-- Tier 1: $16.500 -->
+                <div class="price-tier-card">
+                    <div class="tier-header">
+                        <span class="tier-price">$16.500</span>
+                    </div>
+                    <ul class="tier-items-list">
+                        <li>
+                            <span class="item-name">Milanesa de pollo</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Milanesa de pollo" data-price="16500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Nuggets de pollo</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Nuggets de pollo" data-price="16500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Pernil frito o bbq</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Pernil frito o bbq" data-price="16500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Lomo de cerdo a la plancha</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Lomo de cerdo a la plancha" data-price="16500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Hígado en bistec</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Hígado en bistec" data-price="16500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Chuleta en salsa criolla</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Chuleta en salsa criolla" data-price="16500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Lomo a la mostaza</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Lomo a la mostaza" data-price="16500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tier 2: $17.500 -->
+                <div class="price-tier-card">
+                    <div class="tier-header">
+                        <span class="tier-price">$17.500</span>
+                    </div>
+                    <ul class="tier-items-list">
+                        <li>
+                            <span class="item-name">Carne a la plancha</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Carne a la plancha" data-price="17500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Carne bistec o bbq</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Carne bistec o bbq" data-price="17500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Pechuga a la plancha</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Pechuga a la plancha" data-price="17500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Pechuga en salsa criolla</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Pechuga en salsa criolla" data-price="17500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Pechuga apanada</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Pechuga apanada" data-price="17500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Pechuga bbq</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Pechuga bbq" data-price="17500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Pernil hawaiano</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Pernil hawaiano" data-price="17500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Lomo de cerdo a la bbq</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Lomo de cerdo a la bbq" data-price="17500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Lomo de cerdo al ajillo</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Lomo de cerdo al ajillo" data-price="17500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Chuleta de cerdo al ajillo</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Chuleta de cerdo al ajillo" data-price="17500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Chuleta de cerdo a la bbq</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Chuleta de cerdo a la bbq" data-price="17500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tier 3: $18.000 -->
+                <div class="price-tier-card">
+                    <div class="tier-header">
+                        <span class="tier-price">$18.000</span>
+                    </div>
+                    <ul class="tier-items-list">
+                        <li>
+                            <span class="item-name">Bandeja paisa</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Bandeja paisa" data-price="18000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Alitas bbq</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Alitas bbq" data-price="18000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Creps de pollo</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Creps de pollo" data-price="18000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Bistec a caballo</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Bistec a caballo" data-price="18000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Pechuga hawaiana</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Pechuga hawaiana" data-price="18000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Arroz Mixto</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Arroz Mixto" data-price="18000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Combo Personal</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Combo Personal" data-price="18000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tier 4: $21.000 -->
+                <div class="price-tier-card">
+                    <div class="tier-header">
+                        <span class="tier-price">$21.000</span>
+                    </div>
+                    <ul class="tier-items-list">
+                        <li>
+                            <span class="item-name">Sobrebarriga dorada</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Sobrebarriga dorada" data-price="21000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Bagre frito</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Bagre frito" data-price="21000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Bagre al ajillo</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Bagre al ajillo" data-price="21000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Róbalo apanado</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Róbalo apanado" data-price="21000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Róbalo al ajillo</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Róbalo al ajillo" data-price="21000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tier 5: $22.000 -->
+                <div class="price-tier-card">
+                    <div class="tier-header">
+                        <span class="tier-price">$22.000</span>
+                    </div>
+                    <ul class="tier-items-list">
+                        <li>
+                            <span class="item-name">Bagre sudado</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Bagre sudado" data-price="22000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Bagre frito (sudado)</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Bagre frito sudado" data-price="22000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Mojarra frita</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Mojarra frita" data-price="22000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Mojarra sudada</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Mojarra sudada" data-price="22000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Mojarra frita sudada</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Mojarra frita sudada" data-price="22000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Mini cazuela de mariscos</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Mini cazuela de mariscos" data-price="22000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tier 6: $23.000 -->
+                <div class="price-tier-card">
+                    <div class="tier-header">
+                        <span class="tier-price">$23.000</span>
+                    </div>
+                    <ul class="tier-items-list">
+                        <li>
+                            <span class="item-name">Costillas bbq</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Costillas bbq" data-price="23000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Pechuga con maíz gratinada</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Pechuga con maíz gratinada" data-price="23000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Pechuga en champiñones</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Pechuga en champiñones" data-price="23000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tier 7: $27.500 -->
+                <div class="price-tier-card">
+                    <div class="tier-header">
+                        <span class="tier-price">$27.500</span>
+                    </div>
+                    <ul class="tier-items-list">
+                        <li>
+                            <span class="item-name">Churrasco</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Churrasco" data-price="27500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Parrillada</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Parrillada" data-price="27500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Pechuga con tocineta y champ.</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Pechuga gratinada con tocineta y champiñones" data-price="27500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Pollo Santo domingo</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Pollo Santo domingo" data-price="27500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Llanera mixta</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Llanera mixta" data-price="27500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Parrilla mixta</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Parrilla mixta" data-price="27500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Carne grande</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Carne grande" data-price="27500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Pechuga grande</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Pechuga grande" data-price="27500">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tier 8: $33.000 -->
+                <div class="price-tier-card">
+                    <div class="tier-header">
+                        <span class="tier-price">$33.000</span>
+                    </div>
+                    <ul class="tier-items-list">
+                        <li>
+                            <span class="item-name">Cazuela de mariscos</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Cazuela de mariscos" data-price="33000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Róbalo a la marinera</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Róbalo a la marinera" data-price="33000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Bagre a la marinera</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Bagre a la marinera" data-price="33000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                        <li>
+                            <span class="item-name">Róbalo con camarones</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Róbalo con camarones" data-price="33000">
+                                <i data-lucide="plus"></i>
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: PICADAS -->
+        <section id="picadas" class="picadas-section container">
+            <div class="section-title-wrap">
+                <span class="subtitle">Para Compartir</span>
+                <h2>Picadas Especiales</h2>
+                <p>Las mejores combinaciones de carne para compartir.</p>
+            </div>
+
+            <div class="picadas-grid">
+                <!-- Picada 1 -->
+                <div class="picada-item-card">
+                    <div class="picada-info">
+                        <h3>Picada x 1</h3>
+                        <p>Variedad de carnes y acompañamiento para una persona.</p>
+                    </div>
+                    <div class="picada-action">
+                        <span class="picada-price">$27.500</span>
+                        <button class="btn btn-sm btn-add-cart" data-name="Picada x 1" data-price="27500">
+                            <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Picada 2 -->
+                <div class="picada-item-card">
+                    <div class="picada-info">
+                        <h3>Picada x 2</h3>
+                        <p>Perfecta para compartir en pareja. Incluye carnes, chorizo y papas.</p>
+                    </div>
+                    <div class="picada-action">
+                        <span class="picada-price">$50.000</span>
+                        <button class="btn btn-sm btn-add-cart" data-name="Picada x 2" data-price="50000">
+                            <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Picada 3 -->
+                <div class="picada-item-card">
+                    <div class="picada-info">
+                        <h3>Picada x 3</h3>
+                        <p>Gran porción familiar para tres personas.</p>
+                    </div>
+                    <div class="picada-action">
+                        <span class="picada-price">$66.000</span>
+                        <button class="btn btn-sm btn-add-cart" data-name="Picada x 3" data-price="66000">
+                            <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Picada Berraca -->
+                <div class="picada-item-card berraca-card">
+                    <div class="berraca-glow"></div>
+                    <div class="picada-info">
+                        <span class="badge-mini">¡La más buscada!</span>
+                        <h3>Picada Berraca</h3>
+                        <p>Chicharrón crujiente, costilla, lomo y papitas criollas.</p>
+                    </div>
+                    <div class="picada-action">
+                        <span class="picada-price">$55.000</span>
+                        <button class="btn btn-sm btn-add-cart" data-name="Picada Berraca" data-price="55000">
+                            <i data-lucide="plus"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FLOATING CART DRAWER -->
+        <div id="cart-drawer" class="cart-drawer hidden">
+            <div class="cart-summary-bar" id="cart-summary-trigger">
+                <div class="cart-info-left">
+                    <i data-lucide="shopping-bag" class="cart-icon"></i>
+                    <span id="cart-count">0 items</span>
+                    <span class="cart-separator">|</span>
+                    <span id="cart-total" class="cart-total-text">$0</span>
+                </div>
+                <div class="cart-info-right">
+                    <span>Ver mi pedido</span>
+                    <i data-lucide="chevron-up" id="cart-chevron"></i>
+                </div>
+            </div>
+            
+            <div class="cart-details hidden" id="cart-details-panel">
+                <div class="cart-header-panel">
+                    <h3>Tu Pedido</h3>
+                    <button id="clear-cart-btn" class="btn-clear">Vaciar</button>
+                </div>
+                <div class="cart-items-list" id="cart-items-list">
+                    <!-- Dynamic Cart Items go here -->
+                </div>
+
+                <!-- Tipo de Servicio -->
+                <div class="cart-service-selector">
+                    <label for="cart-service-type">Tipo de Servicio:</label>
+                    <select id="cart-service-type">
+                        <option value="Mesa">Mesa (Comer en restaurante)</option>
+                        <option value="Domicilio">Domicilio (A casa)</option>
+                        <option value="Mostrador">Mostrador (Recoger para llevar)</option>
+                    </select>
+                </div>
+
+                <!-- Desglose de Precios -->
+                <div class="cart-pricing-summary">
+                    <div class="summary-line">
+                        <span>Subtotal:</span>
+                        <span id="summary-subtotal">$0</span>
+                    </div>
+                    <div class="summary-line" id="empaque-row">
+                        <span>Empaque:</span>
+                        <span id="summary-empaque">$0</span>
+                    </div>
+                    <div class="summary-line total-line">
+                        <span>Total a pagar:</span>
+                        <span id="summary-total">$0</span>
+                    </div>
+                </div>
+                
+                <div class="cart-checkout-panel">
+                    <button class="btn btn-primary btn-block" id="whatsapp-checkout-btn">
+                        <i data-lucide="send"></i> Enviar pedido por WhatsApp
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="container footer-content">
+            <div class="brand footer-brand">
+                <i data-lucide="flame" class="icon-brand"></i>
+                <span class="brand-name">San <span class="accent">Parrilla</span></span>
+            </div>
+            <p>&copy; 2026 San Parrilla. Tradición de sabor a la brasa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- JS Logic -->
+    <script src="index.js"></script>
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
