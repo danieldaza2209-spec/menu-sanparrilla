@@ -1,28 +1,35 @@
 /* CSS DESIGN SYSTEM - SAN PARRILLA */
 
 :root {
+    /* Color Palette Bases (RGB) */
+    --mauve-shadow-rgb: 84, 65, 78;
+    --dusty-lavender-rgb: 135, 92, 116;
+    --lilac-ash-rgb: 167, 144, 165;
+    --tea-green-rgb: 197, 235, 195;
+    --ash-grey-rgb: 183, 200, 181;
+
     /* Colors */
-    --bg-primary: #120c09; /* Dark smoked espresso */
-    --bg-secondary: #1a100d; /* Warm wood brown */
-    --bg-card: rgba(28, 18, 14, 0.85);
+    --bg-primary: #1b1318; /* Dark elegant mauve */
+    --bg-secondary: #281d24; /* Muted slate mauve */
+    --bg-card: rgba(var(--mauve-shadow-rgb), 0.85);
     
-    --glass-bg: rgba(28, 18, 14, 0.75);
-    --glass-border: rgba(230, 92, 0, 0.15); /* Orange hint */
-    --glass-glow: rgba(230, 92, 0, 0.1);
+    --glass-bg: rgba(var(--mauve-shadow-rgb), 0.75);
+    --glass-border: rgba(var(--lilac-ash-rgb), 0.15);
+    --glass-glow: rgba(var(--dusty-lavender-rgb), 0.1);
     
-    --primary: #d35400; /* Rich clay/flame orange */
-    --primary-light: #e67e22; /* Bright orange */
-    --primary-glow: rgba(211, 84, 0, 0.45);
+    --primary: #875c74; /* Elegant dusty lavender */
+    --primary-light: #a790a5; /* Soft lilac ash */
+    --primary-glow: rgba(var(--dusty-lavender-rgb), 0.45);
     
-    --accent: #f39c12; /* Warm amber */
-    --accent-gold: #f1c40f; /* Sun gold */
-    --accent-cream: #fbf8f5; /* Warm off-white */
+    --accent: #c5ebc3; /* Pastel tea green */
+    --accent-gold: #b7c8b5; /* Light ash grey */
+    --accent-cream: #fcfafc; /* Warm light white */
     
-    --text-main: #f5ebe6; /* Creamy light text */
-    --text-muted: #a89489; /* Warm taupe/gray */
+    --text-main: #f5eff3; /* Muted creamy lavender text */
+    --text-muted: #b7c8b5; /* Ash grey/green text */
     
     --success: #27ae60;
-    --success-glow: rgba(39, 174, 96, 0.2);
+    --success-glow: rgba(var(--tea-green-rgb), 0.2);
     --danger: #c0392b;
     
     /* Layout */
@@ -64,9 +71,9 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 10% 15%, rgba(211, 84, 0, 0.08) 0%, transparent 45%),
-                radial-gradient(circle at 85% 70%, rgba(243, 156, 18, 0.05) 0%, transparent 45%),
-                radial-gradient(circle at 50% 40%, rgba(28, 18, 14, 0.8) 0%, transparent 100%);
+    background: radial-gradient(circle at 10% 15%, rgba(var(--dusty-lavender-rgb), 0.12) 0%, transparent 45%),
+                radial-gradient(circle at 85% 70%, rgba(var(--tea-green-rgb), 0.08) 0%, transparent 45%),
+                radial-gradient(circle at 50% 40%, rgba(var(--mauve-shadow-rgb), 0.8) 0%, transparent 100%);
     pointer-events: none;
     z-index: -1;
 }
@@ -232,14 +239,14 @@ a {
 }
 
 .badge {
-    background: rgba(211, 84, 0, 0.15);
+    background: rgba(var(--dusty-lavender-rgb), 0.15);
     color: var(--primary-light);
     padding: 0.4rem 0.9rem;
     border-radius: 50px;
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.08em;
-    border: 1px solid rgba(211, 84, 0, 0.25);
+    border: 1px solid rgba(var(--dusty-lavender-rgb), 0.25);
     display: inline-block;
     margin-bottom: 1rem;
 }
@@ -324,13 +331,13 @@ a {
 
 .special-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(211, 84, 0, 0.3);
-    box-shadow: 0 10px 25px rgba(211, 84, 0, 0.05);
+    border-color: rgba(var(--dusty-lavender-rgb), 0.3);
+    box-shadow: 0 10px 25px rgba(var(--dusty-lavender-rgb), 0.05);
 }
 
 .card-icon-header {
-    background: rgba(211, 84, 0, 0.08);
-    border: 1px solid rgba(211, 84, 0, 0.2);
+    background: rgba(var(--dusty-lavender-rgb), 0.08);
+    border: 1px solid rgba(var(--dusty-lavender-rgb), 0.2);
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -416,7 +423,7 @@ a {
 
 .price-tier-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(211, 84, 0, 0.3);
+    border-color: rgba(var(--dusty-lavender-rgb), 0.3);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
@@ -476,8 +483,8 @@ a {
 }
 
 .btn-add-fast {
-    background: rgba(211, 84, 0, 0.1);
-    border: 1px solid rgba(211, 84, 0, 0.2);
+    background: rgba(var(--dusty-lavender-rgb), 0.1);
+    border: 1px solid rgba(var(--dusty-lavender-rgb), 0.2);
     color: var(--primary-light);
     width: 28px;
     height: 28px;
@@ -526,7 +533,7 @@ a {
 
 .picada-item-card:hover {
     transform: translateY(-3px);
-    border-color: rgba(211, 84, 0, 0.25);
+    border-color: rgba(var(--dusty-lavender-rgb), 0.25);
 }
 
 .picada-info h3 {
@@ -555,8 +562,8 @@ a {
 }
 
 .btn-add-cart {
-    background: rgba(211, 84, 0, 0.1);
-    border: 1px solid rgba(211, 84, 0, 0.2);
+    background: rgba(var(--dusty-lavender-rgb), 0.1);
+    border: 1px solid rgba(var(--dusty-lavender-rgb), 0.2);
     color: var(--primary-light);
     cursor: pointer;
     display: inline-flex;
@@ -635,12 +642,12 @@ a {
     width: 90%;
     max-width: 480px;
     z-index: 1000;
-    background: rgba(26, 16, 13, 0.95);
+    background: rgba(var(--bg-secondary), 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1.5px solid var(--primary);
     border-radius: var(--border-radius-md);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(211, 84, 0, 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(var(--dusty-lavender-rgb), 0.15);
     overflow: hidden;
     transition: var(--transition-normal);
 }
@@ -651,7 +658,7 @@ a {
     align-items: center;
     padding: 1rem 1.5rem;
     cursor: pointer;
-    background: rgba(211, 84, 0, 0.05);
+    background: rgba(var(--dusty-lavender-rgb), 0.05);
 }
 
 .cart-info-left {
@@ -736,7 +743,7 @@ a {
 
 .cart-item-container:hover {
     background: rgba(255, 255, 255, 0.04);
-    border-color: rgba(211, 84, 0, 0.15);
+    border-color: rgba(var(--dusty-lavender-rgb), 0.15);
 }
 
 .cart-item-row {
@@ -915,7 +922,7 @@ a {
 /* Flicker Animation */
 @keyframes flame-flicker {
     0% { transform: scale(1) rotate(0deg); opacity: 0.9; }
-    100% { transform: scale(1.08) rotate(3deg); opacity: 1; filter: drop-shadow(0 0 10px rgba(211, 84, 0, 0.6)); }
+    100% { transform: scale(1.08) rotate(3deg); opacity: 1; filter: drop-shadow(0 0 10px rgba(var(--dusty-lavender-rgb), 0.6)); }
 }
 
 /* Utilities */

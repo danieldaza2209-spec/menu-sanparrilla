@@ -3,15 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // MENÚ DEL DÍA (ACTUALIZAR DIARIAMENTE AQUÍ)
     // ==========================================
     const menuDelDia = {
-        sopa: 'Plátano',
+        sopa: 'Fideos',
         principios: [
-            'Espaguetis napolitanos',
-            'Verduras en crema de leche',
+            'Arvejas caseras',
+            'Ensalada hawaiana',
             'Frijoles caseros'
         ],
         acompanamientos: [
-            'Arepuelas',
-            'Maduro pícaro',
+            'Puré de papa',
+            'Pataconcitos',
             'Tajadas maduras'
         ]
     };
