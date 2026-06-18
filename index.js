@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Shopping Cart State: Array of objects with unique IDs
     let cart = [];
-    const whatsappNumber = '573023305158'; // Target phone number for real testing
+    const whatsappNumber = '573183821787'; // Target phone number for real testing
 
     // Elements
     const cartDrawer = document.getElementById('cart-drawer');
