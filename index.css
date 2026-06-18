@@ -2,35 +2,35 @@
 
 :root {
     /* Color Palette Bases (RGB) */
-    --mauve-shadow-rgb: 84, 65, 78;
-    --dusty-lavender-rgb: 135, 92, 116;
-    --lilac-ash-rgb: 167, 144, 165;
-    --tea-green-rgb: 197, 235, 195;
-    --ash-grey-rgb: 183, 200, 181;
+    --mauve-shadow-rgb: 121, 85, 72; /* Warm brown */
+    --dusty-lavender-rgb: 255, 215, 0; /* Brilliant gold */
+    --lilac-ash-rgb: 128, 128, 128; /* Ash grey */
+    --tea-green-rgb: 76, 175, 80; /* Vibrant green */
+    --ash-grey-rgb: 128, 128, 128; /* Ash grey */
 
     /* Colors */
-    --bg-primary: #1b1318; /* Dark elegant mauve */
-    --bg-secondary: #281d24; /* Muted slate mauve */
-    --bg-card: rgba(var(--mauve-shadow-rgb), 0.85);
+    --bg-primary: #18110e; /* Dark chocolate/charcoal base */
+    --bg-secondary: #261b16; /* Warm brown */
+    --bg-card: rgba(var(--mauve-shadow-rgb), 0.25);
     
-    --glass-bg: rgba(var(--mauve-shadow-rgb), 0.75);
-    --glass-border: rgba(var(--lilac-ash-rgb), 0.15);
-    --glass-glow: rgba(var(--dusty-lavender-rgb), 0.1);
+    --glass-bg: rgba(38, 27, 22, 0.85);
+    --glass-border: rgba(var(--mauve-shadow-rgb), 0.3);
+    --glass-glow: rgba(var(--dusty-lavender-rgb), 0.05);
     
-    --primary: #875c74; /* Elegant dusty lavender */
-    --primary-light: #a790a5; /* Soft lilac ash */
+    --primary: #FFD700; /* Vibrant Gold */
+    --primary-light: #ffe240;
     --primary-glow: rgba(var(--dusty-lavender-rgb), 0.45);
     
-    --accent: #c5ebc3; /* Pastel tea green */
-    --accent-gold: #b7c8b5; /* Light ash grey */
-    --accent-cream: #fcfafc; /* Warm light white */
+    --accent: #4CAF50; /* Vibrant Green */
+    --accent-gold: #FFD700; /* Gold */
+    --accent-cream: #FFFFF0; /* Ivory */
     
-    --text-main: #f5eff3; /* Muted creamy lavender text */
-    --text-muted: #b7c8b5; /* Ash grey/green text */
+    --text-main: #FFFFF0; /* Pure Ivory - high contrast */
+    --text-muted: #b5beb3; /* Grey-green readable text */
     
-    --success: #27ae60;
+    --success: #4CAF50;
     --success-glow: rgba(var(--tea-green-rgb), 0.2);
-    --danger: #c0392b;
+    --danger: #e74c3c;
     
     /* Layout */
     --header-height: 75px;
@@ -135,6 +135,12 @@ a {
     height: 26px;
     filter: drop-shadow(0 0 6px var(--primary-glow));
     animation: flame-flicker 2s infinite alternate;
+}
+
+.brand-logo {
+    height: 44px;
+    width: auto;
+    object-fit: contain;
 }
 
 .brand-name {

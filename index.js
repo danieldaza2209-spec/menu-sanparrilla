@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // MENÚ DEL DÍA (ACTUALIZAR DIARIAMENTE AQUÍ)
     // ==========================================
     const menuDelDia = {
-        sopa: 'Fideos',
+        sopa: 'Arroz',
         principios: [
             'Arvejas caseras',
             'Ensalada hawaiana',
