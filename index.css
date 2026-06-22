@@ -936,6 +936,47 @@ a {
     display: none !important;
 }
 
+/* Specials Badges & Highlight Boxes */
+.special-day-box {
+    margin-top: 1.25rem;
+    padding: 1.1rem 0.8rem 0.6rem 0.8rem;
+    border-radius: var(--border-radius-sm);
+    background: rgba(24, 17, 14, 0.4); /* Darker inset container background */
+    border: 1.5px dashed var(--primary); /* Dashed gold border */
+    position: relative;
+    box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.special-day-badge {
+    position: absolute;
+    top: -11px;
+    left: 10px;
+    background: var(--primary); /* Gold background */
+    color: #18110e; /* Dark brown text for contrast */
+    font-size: 0.65rem;
+    font-weight: 800;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.special-items-list {
+    margin-top: 0.4rem;
+}
+
+.day-only-badge {
+    background: rgba(var(--tea-green-rgb), 0.15); /* Light green tint */
+    color: var(--accent); /* Accent green text */
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.1rem 0.4rem;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 /* Responsive */
 @media(max-width: 768px) {
     .header-container {

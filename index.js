@@ -6,12 +6,12 @@ document.addEventListener('DOMContentLoaded', () => {
         sopa: 'Arroz',
         principios: [
             'Arvejas caseras',
-            'Ensalada hawaiana',
+            'Ensalada de atún',
             'Frijoles caseros'
         ],
         acompanamientos: [
-            'Puré de papa',
-            'Pataconcitos',
+            'Francesa casera',
+            'Maduro pícaro',
             'Tajadas maduras'
         ]
     };
