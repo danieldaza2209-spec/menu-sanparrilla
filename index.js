@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuDelDia = {
         sopa: 'Arroz',
         principios: [
-            'Arvejas caseras',
+            'Garbanzos rancheros',
             'Ensalada de atún',
             'Frijoles caseros'
         ],
