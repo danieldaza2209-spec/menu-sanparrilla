@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
             'Frijoles caseros'
         ],
         acompanamientos: [
-            'Francesa casera',
-            'Maduro pícaro',
+            'Torta de maduro',
+            'Papa encilantrada',
             'Tajadas maduras'
         ]
     };
