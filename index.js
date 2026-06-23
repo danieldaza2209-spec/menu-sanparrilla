@@ -132,7 +132,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Defaults for daily specials (only if not a picada)
             soup: isPicada ? null : menuDelDia.sopa,
             principle: isPicada ? null : menuDelDia.principios[0],
-            side: isPicada ? null : menuDelDia.acompanamientos[0]
+            side: isPicada ? null : menuDelDia.acompanamientos[0],
+            salad: isPicada ? null : 'Con ensalada'
         };
 
         cart.push(newItem);
@@ -226,6 +227,13 @@ document.addEventListener('DOMContentLoaded', () => {
                                 ${sideOptions}
                             </select>
                         </div>
+                        <div class="customizer-select-group">
+                            <label>Ensalada:</label>
+                            <select class="item-select-salad" data-id="${item.id}">
+                                <option value="Con ensalada" ${item.salad === 'Con ensalada' ? 'selected' : ''}>Con ensalada</option>
+                                <option value="Sin ensalada" ${item.salad === 'Sin ensalada' ? 'selected' : ''}>Sin ensalada</option>
+                            </select>
+                        </div>
                     </div>
                 `;
             }
@@ -288,6 +296,15 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+        document.querySelectorAll('.item-select-salad').forEach(select => {
+            select.addEventListener('change', (e) => {
+                const id = e.target.getAttribute('data-id');
+                const val = e.target.value;
+                const item = cart.find(i => i.id === id);
+                if (item) item.salad = val;
+            });
+        });
+
         cartCountEl.textContent = `${cart.length} plato${cart.length > 1 ? 's' : ''}`;
         cartTotalEl.textContent = `$${total.toLocaleString('es-CO')}`;
         
@@ -321,6 +338,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 orderText += `   🥣 Sopa: ${item.soup || 'No elegida'}\n`;
                 orderText += `   🍚 Principio: ${item.principle || 'No elegido'}\n`;
                 orderText += `   🍟 Acompañante: ${item.side || 'No elegido'}\n`;
+                orderText += `   🥗 Ensalada: ${item.salad || 'Con ensalada'}\n`;
             }
             orderText += '\n';
         });

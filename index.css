@@ -506,7 +506,7 @@ a {
 .btn-add-fast:hover {
     background: var(--primary);
     border-color: var(--primary);
-    color: #ffffff;
+    color: var(--bg-primary);
     transform: scale(1.1);
 }
 
@@ -631,7 +631,7 @@ a {
 
 .btn-primary {
     background-color: var(--primary);
-    color: #ffffff;
+    color: var(--bg-primary);
 }
 
 .btn-primary:hover {
