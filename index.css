@@ -2,33 +2,33 @@
 
 :root {
     /* Color Palette Bases (RGB) */
-    --mauve-shadow-rgb: 120, 0, 0; /* Molten Lava red */
-    --dusty-lavender-rgb: 193, 18, 31; /* Brick Red */
-    --lilac-ash-rgb: 102, 155, 188; /* Steel Blue */
-    --tea-green-rgb: 102, 155, 188; /* Steel Blue */
-    --ash-grey-rgb: 102, 155, 188; /* Steel Blue */
+    --mauve-shadow-rgb: 121, 85, 72; /* Warm brown */
+    --dusty-lavender-rgb: 255, 215, 0; /* Brilliant gold */
+    --lilac-ash-rgb: 128, 128, 128; /* Ash grey */
+    --tea-green-rgb: 76, 175, 80; /* Vibrant green */
+    --ash-grey-rgb: 128, 128, 128; /* Ash grey */
 
     /* Colors */
-    --bg-primary: #003049; /* Deep Space Blue */
-    --bg-secondary: #780000; /* Molten Lava */
+    --bg-primary: #18110e; /* Dark chocolate/charcoal base */
+    --bg-secondary: #261b16; /* Warm brown */
     --bg-card: rgba(var(--mauve-shadow-rgb), 0.25);
     
-    --glass-bg: rgba(0, 48, 73, 0.85);
-    --glass-border: rgba(var(--lilac-ash-rgb), 0.3);
+    --glass-bg: rgba(38, 27, 22, 0.85);
+    --glass-border: rgba(var(--mauve-shadow-rgb), 0.3);
     --glass-glow: rgba(var(--dusty-lavender-rgb), 0.05);
     
-    --primary: #c1121f; /* Brick Red */
-    --primary-light: #e0222f;
+    --primary: #FFD700; /* Vibrant Gold */
+    --primary-light: #ffe240;
     --primary-glow: rgba(var(--dusty-lavender-rgb), 0.45);
     
-    --accent: #669bbc; /* Steel Blue */
-    --accent-gold: #c1121f; /* Brick Red */
-    --accent-cream: #fdf0d5; /* Papaya Whip */
+    --accent: #4CAF50; /* Vibrant Green */
+    --accent-gold: #FFD700; /* Gold */
+    --accent-cream: #FFFFF0; /* Ivory */
     
-    --text-main: #fdf0d5; /* Papaya Whip - high contrast */
-    --text-muted: #a3c1d4; /* Steel-blue readable text */
+    --text-main: #FFFFF0; /* Pure Ivory - high contrast */
+    --text-muted: #b5beb3; /* Grey-green readable text */
     
-    --success: #669bbc; /* Steel Blue success */
+    --success: #4CAF50;
     --success-glow: rgba(var(--tea-green-rgb), 0.2);
     --danger: #e74c3c;
     
@@ -510,7 +510,7 @@ a {
 .btn-add-fast:hover {
     background: var(--primary);
     border-color: var(--primary);
-    color: var(--text-main);
+    color: var(--bg-primary);
     transform: scale(1.1);
 }
 
@@ -635,7 +635,7 @@ a {
 
 .btn-primary {
     background-color: var(--primary);
-    color: var(--text-main);
+    color: var(--bg-primary);
 }
 
 .btn-primary:hover {
@@ -652,7 +652,7 @@ a {
     width: 90%;
     max-width: 480px;
     z-index: 1000;
-    background: rgba(0, 48, 73, 0.95);
+    background: rgba(38, 27, 22, 0.95);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1.5px solid var(--primary);
@@ -956,7 +956,7 @@ a {
     top: -11px;
     left: 10px;
     background: var(--primary); /* Gold background */
-    color: var(--text-main); /* High contrast light text */
+    color: #18110e; /* Dark brown text for contrast */
     font-size: 0.65rem;
     font-weight: 800;
     padding: 0.2rem 0.6rem;
