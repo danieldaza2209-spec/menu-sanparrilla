@@ -1010,4 +1010,165 @@ a {
         min-height: 130px;
         padding: 1rem;
     }
+
+    /* Sobredimensionamiento del Carrito para Celular (Opción A) */
+    .cart-drawer {
+        bottom: 2rem;
+        width: 95%;
+        max-width: 95%;
+        border-width: 3px;
+        border-radius: 24px;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(var(--dusty-lavender-rgb), 0.25);
+    }
+
+    .cart-summary-bar {
+        padding: 1.8rem 2.5rem;
+    }
+
+    .cart-info-left {
+        gap: 1.25rem;
+    }
+
+    .cart-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .cart-total-text {
+        font-size: 2rem;
+    }
+
+    .cart-info-right {
+        gap: 0.8rem;
+        font-size: 1.6rem;
+    }
+
+    .cart-chevron {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .cart-details {
+        padding: 2.2rem 2.5rem;
+        max-height: 60vh;
+    }
+
+    .cart-header-panel {
+        margin-bottom: 1.8rem;
+        padding-bottom: 0.8rem;
+    }
+
+    .cart-header-panel h3 {
+        font-size: 1.8rem;
+    }
+
+    .btn-clear {
+        font-size: 1.5rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .cart-items-list {
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .cart-item-container {
+        padding: 1.5rem;
+        border-radius: 12px;
+    }
+
+    .cart-item-row {
+        font-size: 1.8rem;
+    }
+
+    .cart-item-name {
+        font-size: 1.8rem;
+    }
+
+    .cart-item-meta {
+        font-size: 1.4rem;
+        margin-top: 0.3rem;
+    }
+
+    .btn-remove-item svg {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .cart-item-customizer {
+        gap: 0.8rem;
+        margin-top: 1.2rem;
+        padding-top: 1.2rem;
+    }
+
+    .customizer-select-group {
+        font-size: 1.5rem;
+    }
+
+    .customizer-select-group label {
+        font-size: 1.5rem;
+    }
+
+    .customizer-select-group select {
+        padding: 0.5rem 1rem;
+        border-radius: 8px;
+        font-size: 1.4rem;
+        width: 260px;
+        height: 48px; /* Large touch target */
+    }
+
+    .cart-service-selector {
+        padding-top: 1.8rem;
+        margin-top: 2rem;
+        margin-bottom: 1.8rem;
+    }
+
+    .cart-service-selector label {
+        font-size: 1.6rem;
+    }
+
+    .cart-service-selector select {
+        padding: 0.6rem 1.2rem;
+        border-radius: 8px;
+        font-size: 1.5rem;
+        width: 320px;
+        height: 52px; /* Large touch target */
+    }
+
+    .cart-pricing-summary {
+        gap: 0.8rem;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .summary-line {
+        font-size: 1.5rem;
+    }
+
+    .summary-line.total-line {
+        padding-top: 1rem;
+        margin-top: 0.5rem;
+        font-size: 1.8rem;
+    }
+
+    .summary-line.total-line span:last-child {
+        font-size: 2.2rem;
+    }
+
+    .cart-checkout-panel {
+        padding-top: 1.8rem;
+    }
+
+    #whatsapp-checkout-btn {
+        font-size: 1.8rem !important;
+        padding: 1.2rem 2rem !important;
+        height: 64px; /* Large touch target */
+        border-radius: 12px !important;
+        gap: 0.8rem;
+    }
+
+    #whatsapp-checkout-btn svg {
+        width: 28px !important;
+        height: 28px !important;
+    }
 }
