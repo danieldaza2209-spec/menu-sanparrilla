@@ -982,7 +982,7 @@ a {
 }
 
 /* Responsive */
-@media(max-width: 768px) {
+@media(max-width: 980px) {
     .header-container {
         flex-direction: column;
         gap: 0.75rem;
@@ -1013,9 +1013,9 @@ a {
 
     /* Sobredimensionamiento del Carrito para Celular (Opción A) */
     .cart-drawer {
-        bottom: 2rem;
-        width: 95%;
-        max-width: 95%;
+        bottom: 1rem;
+        width: 98%;
+        max-width: 98%;
         border-width: 3px;
         border-radius: 24px;
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(var(--dusty-lavender-rgb), 0.25);
@@ -1030,27 +1030,31 @@ a {
     }
 
     .cart-icon {
-        width: 36px;
-        height: 36px;
+        width: 44px;
+        height: 44px;
+    }
+
+    #cart-count {
+        font-size: 1.8rem;
     }
 
     .cart-total-text {
-        font-size: 2rem;
+        font-size: 2.4rem;
     }
 
     .cart-info-right {
         gap: 0.8rem;
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     .cart-chevron {
-        width: 32px !important;
-        height: 32px !important;
+        width: 36px !important;
+        height: 36px !important;
     }
 
     .cart-details {
         padding: 2.2rem 2.5rem;
-        max-height: 60vh;
+        max-height: 65vh;
     }
 
     .cart-header-panel {
@@ -1059,11 +1063,11 @@ a {
     }
 
     .cart-header-panel h3 {
-        font-size: 1.8rem;
+        font-size: 2.2rem;
     }
 
     .btn-clear {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
         padding: 0.5rem 1rem;
     }
 
@@ -1078,21 +1082,21 @@ a {
     }
 
     .cart-item-row {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .cart-item-name {
-        font-size: 1.8rem;
+        font-size: 2rem;
     }
 
     .cart-item-meta {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         margin-top: 0.3rem;
     }
 
     .btn-remove-item svg {
-        width: 32px !important;
-        height: 32px !important;
+        width: 36px !important;
+        height: 36px !important;
     }
 
     .cart-item-customizer {
@@ -1102,19 +1106,19 @@ a {
     }
 
     .customizer-select-group {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .customizer-select-group label {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .customizer-select-group select {
-        padding: 0.5rem 1rem;
+        padding: 0.6rem 1.2rem;
         border-radius: 8px;
-        font-size: 1.4rem;
-        width: 260px;
-        height: 48px; /* Large touch target */
+        font-size: 1.6rem;
+        width: 320px;
+        height: 54px; /* Large touch target */
     }
 
     .cart-service-selector {
@@ -1124,15 +1128,15 @@ a {
     }
 
     .cart-service-selector label {
-        font-size: 1.6rem;
+        font-size: 1.9rem;
     }
 
     .cart-service-selector select {
-        padding: 0.6rem 1.2rem;
+        padding: 0.7rem 1.4rem;
         border-radius: 8px;
-        font-size: 1.5rem;
-        width: 320px;
-        height: 52px; /* Large touch target */
+        font-size: 1.7rem;
+        width: 360px;
+        height: 58px; /* Large touch target */
     }
 
     .cart-pricing-summary {
@@ -1142,17 +1146,17 @@ a {
     }
 
     .summary-line {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     .summary-line.total-line {
         padding-top: 1rem;
         margin-top: 0.5rem;
-        font-size: 1.8rem;
+        font-size: 2.2rem;
     }
 
     .summary-line.total-line span:last-child {
-        font-size: 2.2rem;
+        font-size: 2.6rem;
     }
 
     .cart-checkout-panel {
@@ -1160,15 +1164,15 @@ a {
     }
 
     #whatsapp-checkout-btn {
-        font-size: 1.8rem !important;
+        font-size: 2.2rem !important;
         padding: 1.2rem 2rem !important;
-        height: 64px; /* Large touch target */
-        border-radius: 12px !important;
+        height: 72px; /* Large touch target */
+        border-radius: 16px !important;
         gap: 0.8rem;
     }
 
     #whatsapp-checkout-btn svg {
-        width: 28px !important;
-        height: 28px !important;
+        width: 32px !important;
+        height: 32px !important;
     }
 }
