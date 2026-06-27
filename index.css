@@ -867,6 +867,12 @@ a {
     border-color: var(--primary-light);
 }
 
+#cubiertos-selector-container {
+    border-top: none;
+    margin-top: 0.5rem;
+    padding-top: 0;
+}
+
 .cart-pricing-summary {
     display: flex;
     flex-direction: column;
@@ -1137,6 +1143,12 @@ a {
         font-size: 1.7rem;
         width: 360px;
         height: 58px; /* Large touch target */
+    }
+
+    #cubiertos-selector-container {
+        border-top: none;
+        margin-top: 0.5rem;
+        padding-top: 0;
     }
 
     .cart-pricing-summary {

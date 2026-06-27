@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuDelDia = {
         sopa: 'Sancocho',
         principios: [
-            'Ensalada primaveral',
-            'Lentejas caseras',
-            'Frijoles caseros'
+            'Ensalada waldorf',
+            'Frijoles',
+            'Espaguetis'
         ],
         acompanamientos: [
-            'Moneditas de plátano verde',
-            'Papa en salsa criolla',
+            'Torta de zanahoria',
+            'Papa francesa casera',
             'Tajadas maduras'
         ]
     };
@@ -260,6 +260,17 @@ document.addEventListener('DOMContentLoaded', () => {
             empaqueRow.classList.add('hidden');
         }
 
+        const cubiertosContainer = document.getElementById('cubiertos-selector-container');
+        if (cubiertosContainer) {
+            if (isToGo) {
+                cubiertosContainer.classList.remove('hidden');
+            } else {
+                cubiertosContainer.classList.add('hidden');
+                const selectElement = document.getElementById('cart-cubiertos');
+                if (selectElement) selectElement.value = 'No necesito';
+            }
+        }
+
         // Event listeners for Delete Buttons
         document.querySelectorAll('.btn-remove-item').forEach(btn => {
             btn.addEventListener('click', (e) => {
@@ -348,6 +359,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (packagingFee > 0) {
             orderText += `📦 *Costo de Empaque:* $${packagingFee.toLocaleString('es-CO')} ($1.000 x ${cart.length} artículo${cart.length > 1 ? 's' : ''})\n`;
         }
+
+        if (isToGo) {
+            const cubiertosSelect = document.getElementById('cart-cubiertos');
+            const cubiertosValue = cubiertosSelect ? cubiertosSelect.value : 'No necesito';
+            orderText += `🍴 *Cubiertos:* ${cubiertosValue}\n`;
+        }
+
         orderText += `💵 *TOTAL A PAGAR:* $${total.toLocaleString('es-CO')}\n\n`;
         orderText += '¡Muchas gracias! Espero mi confirmación del pedido por este medio.';
 
