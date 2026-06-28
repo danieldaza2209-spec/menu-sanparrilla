@@ -5,12 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuDelDia = {
         sopa: 'Sancocho',
         principios: [
-            'Ensalada tropical',
+            'Ensalada semirrusa',
             'Frijoles',
             'Espaguetis'
         ],
         acompanamientos: [
-            'Yuca frita o al vapor',
+            'Torta de mazorca',
+            'Puré de papa',
             'Tajadas maduras'
         ]
     };
@@ -120,19 +121,69 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Core Cart Functions
+    function getDisallowedOptions(name) {
+        const lower = name.toLowerCase();
+        
+        // Bandeja paisa or fish/seafood dishes have ALL options disallowed
+        const isStructured = lower.includes('bandeja paisa') || 
+                             lower.includes('bagre') || 
+                             lower.includes('robalo') || 
+                             lower.includes('róbalo') || 
+                             lower.includes('mojarra') || 
+                             lower.includes('cazuela') || 
+                             lower.includes('mariscos') || 
+                             lower.includes('pescado');
+                             
+        if (isStructured) {
+            return {
+                soup: false,
+                principle: false,
+                side: false,
+                salad: false
+            };
+        }
+        
+        // 18k dishes: arroz con pollo, arroz campesino, espagueti con pollo, espagueti boloñesa, creps de pollo
+        // Only soup and side allowed (no principle, no salad)
+        const is18kSpecial = lower.includes('arroz con pollo') || 
+                             lower.includes('arroz campesino') || 
+                             lower.includes('espagueti con pollo') || 
+                             lower.includes('espagueti boloñesa') || 
+                             lower.includes('creps de pollo') || 
+                             lower.includes('crep de pollo');
+                             
+        if (is18kSpecial) {
+            return {
+                soup: true,
+                principle: false,
+                side: true,
+                salad: false
+            };
+        }
+        
+        // Default: all options allowed
+        return {
+            soup: true,
+            principle: true,
+            side: true,
+            salad: true
+        };
+    }
+
     function addToCart(name, price) {
         const id = Date.now() + Math.random().toString(36).substr(2, 9);
         const isPicada = name.toLowerCase().includes('picada');
+        const disallowed = getDisallowedOptions(name);
 
         const newItem = {
             id: id,
             name: name,
             price: price,
-            // Defaults for daily specials (only if not a picada)
-            soup: isPicada ? null : menuDelDia.sopa,
-            principle: isPicada ? null : menuDelDia.principios[0],
-            side: isPicada ? null : menuDelDia.acompanamientos[0],
-            salad: isPicada ? null : 'Con ensalada'
+            // Defaults for daily specials (only if not a picada and option is allowed)
+            soup: (!isPicada && disallowed.soup) ? menuDelDia.sopa : null,
+            principle: (!isPicada && disallowed.principle) ? menuDelDia.principios[0] : null,
+            side: (!isPicada && disallowed.side) ? menuDelDia.acompanamientos[0] : null,
+            salad: (!isPicada && disallowed.salad) ? 'Con ensalada' : null
         };
 
         cart.push(newItem);
@@ -192,40 +243,56 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
 
             // If not a picada, add selectors inside this specific card
-            if (!isPicada) {
-                const soupOptions = `
-                    <option value="${menuDelDia.sopa}" ${item.soup === menuDelDia.sopa ? 'selected' : ''}>${menuDelDia.sopa}</option>
-                    <option value="Sin Sopa" ${item.soup === 'Sin Sopa' ? 'selected' : ''}>Sin sopa</option>
-                `;
-
-                const principleOptions = menuDelDia.principios.map(p => `
-                    <option value="${p}" ${item.principle === p ? 'selected' : ''}>${p}</option>
-                `).join('') + `<option value="Sin Principio" ${item.principle === 'Sin Principio' ? 'selected' : ''}>Sin principio</option>`;
-
-                const sideOptions = menuDelDia.acompanamientos.map(a => `
-                    <option value="${a}" ${item.side === a ? 'selected' : ''}>${a}</option>
-                `).join('') + `<option value="Sin Acompañamiento" ${item.side === 'Sin Acompañamiento' ? 'selected' : ''}>Sin acompañamiento</option>`;
-
+            if (!isPicada && (item.soup || item.principle || item.side || item.salad)) {
                 itemHtml += `
                     <div class="cart-item-customizer">
+                `;
+
+                if (item.soup) {
+                    const soupOptions = `
+                        <option value="${menuDelDia.sopa}" ${item.soup === menuDelDia.sopa ? 'selected' : ''}>${menuDelDia.sopa}</option>
+                        <option value="Sin Sopa" ${item.soup === 'Sin Sopa' ? 'selected' : ''}>Sin sopa</option>
+                    `;
+                    itemHtml += `
                         <div class="customizer-select-group">
                             <label>Sopa:</label>
                             <select class="item-select-soup" data-id="${item.id}">
                                 ${soupOptions}
                             </select>
                         </div>
+                    `;
+                }
+
+                if (item.principle) {
+                    const principleOptions = menuDelDia.principios.map(p => `
+                        <option value="${p}" ${item.principle === p ? 'selected' : ''}>${p}</option>
+                    `).join('') + `<option value="Sin Principio" ${item.principle === 'Sin Principio' ? 'selected' : ''}>Sin principio</option>`;
+                    itemHtml += `
                         <div class="customizer-select-group">
                             <label>Principio:</label>
                             <select class="item-select-principle" data-id="${item.id}">
                                 ${principleOptions}
                             </select>
                         </div>
+                    `;
+                }
+
+                if (item.side) {
+                    const sideOptions = menuDelDia.acompanamientos.map(a => `
+                        <option value="${a}" ${item.side === a ? 'selected' : ''}>${a}</option>
+                    `).join('') + `<option value="Sin Acompañamiento" ${item.side === 'Sin Acompañamiento' ? 'selected' : ''}>Sin acompañamiento</option>`;
+                    itemHtml += `
                         <div class="customizer-select-group">
                             <label>Acompañamiento:</label>
                             <select class="item-select-side" data-id="${item.id}">
                                 ${sideOptions}
                             </select>
                         </div>
+                    `;
+                }
+
+                if (item.salad) {
+                    itemHtml += `
                         <div class="customizer-select-group">
                             <label>Ensalada:</label>
                             <select class="item-select-salad" data-id="${item.id}">
@@ -233,6 +300,10 @@ document.addEventListener('DOMContentLoaded', () => {
                                 <option value="Sin ensalada" ${item.salad === 'Sin ensalada' ? 'selected' : ''}>Sin ensalada</option>
                             </select>
                         </div>
+                    `;
+                }
+
+                itemHtml += `
                     </div>
                 `;
             }
@@ -345,10 +416,10 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const isPicada = item.name.toLowerCase().includes('picada');
             if (!isPicada) {
-                orderText += `   🥣 Sopa: ${item.soup || 'No elegida'}\n`;
-                orderText += `   🍚 Principio: ${item.principle || 'No elegido'}\n`;
-                orderText += `   🍟 Acompañante: ${item.side || 'No elegido'}\n`;
-                orderText += `   🥗 Ensalada: ${item.salad || 'Con ensalada'}\n`;
+                if (item.soup) orderText += `   🥣 Sopa: ${item.soup}\n`;
+                if (item.principle) orderText += `   🍚 Principio: ${item.principle}\n`;
+                if (item.side) orderText += `   🍟 Acompañante: ${item.side}\n`;
+                if (item.salad) orderText += `   🥗 Ensalada: ${item.salad}\n`;
             }
             orderText += '\n';
         });
