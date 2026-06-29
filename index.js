@@ -174,6 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function addToCart(name, price) {
         const id = Date.now() + Math.random().toString(36).substr(2, 9);
         const isPicada = name.toLowerCase().includes('picada');
+        const isCombo = name.toLowerCase().includes('combo personal');
         const disallowed = getDisallowedOptions(name);
 
         const newItem = {
