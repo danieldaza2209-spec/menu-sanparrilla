@@ -124,8 +124,9 @@ document.addEventListener('DOMContentLoaded', () => {
     function getDisallowedOptions(name) {
         const lower = name.toLowerCase();
         
-        // Bandeja paisa or fish/seafood dishes have ALL options disallowed
+        // Bandeja paisa, Combo Personal or fish/seafood dishes have ALL options disallowed
         const isStructured = lower.includes('bandeja paisa') || 
+                             lower.includes('combo personal') ||
                              lower.includes('bagre') || 
                              lower.includes('robalo') || 
                              lower.includes('róbalo') || 
@@ -183,7 +184,10 @@ document.addEventListener('DOMContentLoaded', () => {
             soup: (!isPicada && disallowed.soup) ? menuDelDia.sopa : null,
             principle: (!isPicada && disallowed.principle) ? menuDelDia.principios[0] : null,
             side: (!isPicada && disallowed.side) ? menuDelDia.acompanamientos[0] : null,
-            salad: (!isPicada && disallowed.salad) ? 'Con ensalada' : null
+            salad: (!isPicada && disallowed.salad) ? 'Con ensalada' : null,
+            // Custom options for Combo Personal
+            protein: isCombo ? 'Milanesa de pollo' : null,
+            beverage: isCombo ? 'Agua en botella' : null
         };
 
         cart.push(newItem);
@@ -308,6 +312,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 `;
             }
 
+            // If it's Combo Personal, render its custom selectors
+            const isCombo = item.name.toLowerCase().includes('combo personal');
+            if (isCombo) {
+                const proteinOptions = `
+                    <option value="Milanesa de pollo" ${item.protein === 'Milanesa de pollo' ? 'selected' : ''}>Milanesa de pollo</option>
+                    <option value="Lomo de cerdo a la plancha" ${item.protein === 'Lomo de cerdo a la plancha' ? 'selected' : ''}>Lomo de cerdo a la plancha</option>
+                `;
+                const beverageOptions = `
+                    <option value="Agua en botella" ${item.beverage === 'Agua en botella' ? 'selected' : ''}>Agua en botella</option>
+                    <option value="Gaseosa personal" ${item.beverage === 'Gaseosa personal' ? 'selected' : ''}>Gaseosa personal</option>
+                `;
+
+                itemHtml += `
+                    <div class="cart-item-customizer">
+                        <div class="customizer-select-group">
+                            <label>Proteína:</label>
+                            <select class="item-select-protein" data-id="${item.id}">
+                                ${proteinOptions}
+                            </select>
+                        </div>
+                        <div class="customizer-select-group">
+                            <label>Bebida:</label>
+                            <select class="item-select-beverage" data-id="${item.id}">
+                                ${beverageOptions}
+                            </select>
+                        </div>
+                    </div>
+                `;
+            }
+
             itemContainer.innerHTML = itemHtml;
             cartItemsList.appendChild(itemContainer);
         });
@@ -386,6 +420,24 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
+        document.querySelectorAll('.item-select-protein').forEach(select => {
+            select.addEventListener('change', (e) => {
+                const id = e.target.getAttribute('data-id');
+                const val = e.target.value;
+                const item = cart.find(i => i.id === id);
+                if (item) item.protein = val;
+            });
+        });
+
+        document.querySelectorAll('.item-select-beverage').forEach(select => {
+            select.addEventListener('change', (e) => {
+                const id = e.target.getAttribute('data-id');
+                const val = e.target.value;
+                const item = cart.find(i => i.id === id);
+                if (item) item.beverage = val;
+            });
+        });
+
         cartCountEl.textContent = `${cart.length} plato${cart.length > 1 ? 's' : ''}`;
         cartTotalEl.textContent = `$${total.toLocaleString('es-CO')}`;
         
@@ -420,6 +472,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (item.principle) orderText += `   🍚 Principio: ${item.principle}\n`;
                 if (item.side) orderText += `   🍟 Acompañante: ${item.side}\n`;
                 if (item.salad) orderText += `   🥗 Ensalada: ${item.salad}\n`;
+            }
+
+            const isCombo = item.name.toLowerCase().includes('combo personal');
+            if (isCombo) {
+                if (item.protein) orderText += `   🍗 Proteína: ${item.protein}\n`;
+                if (item.beverage) orderText += `   🥤 Bebida: ${item.beverage}\n`;
             }
             orderText += '\n';
         });
