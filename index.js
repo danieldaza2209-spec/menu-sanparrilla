@@ -73,6 +73,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const summaryTotal = document.getElementById('summary-total');
     const empaqueRow = document.getElementById('empaque-row');
 
+    // Domicilio Fields
+    const phoneInput = document.getElementById('cart-phone');
+    const addressInput = document.getElementById('cart-address');
+    const domicilioContainer = document.getElementById('domicilio-fields-container');
+
+    // Restore and save delivery data to localStorage
+    if (phoneInput) {
+        phoneInput.value = localStorage.getItem('san_parrilla_phone') || '';
+        phoneInput.addEventListener('input', (e) => {
+            localStorage.setItem('san_parrilla_phone', e.target.value);
+        });
+    }
+    if (addressInput) {
+        addressInput.value = localStorage.getItem('san_parrilla_address') || '';
+        addressInput.addEventListener('input', (e) => {
+            localStorage.setItem('san_parrilla_address', e.target.value);
+        });
+    }
+
     // Add item to cart event delegator or direct binding
     function bindAddButtons() {
         const addCartButtons = document.querySelectorAll('.btn-add-fast');
@@ -376,6 +395,15 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
+        const domicilioContainer = document.getElementById('domicilio-fields-container');
+        if (domicilioContainer) {
+            if (serviceType === 'Domicilio') {
+                domicilioContainer.classList.remove('hidden');
+            } else {
+                domicilioContainer.classList.add('hidden');
+            }
+        }
+
         // Event listeners for Delete Buttons
         document.querySelectorAll('.btn-remove-item').forEach(btn => {
             btn.addEventListener('click', (e) => {
@@ -450,6 +478,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (cart.length === 0) return;
 
         const serviceType = serviceTypeSelect ? serviceTypeSelect.value : 'Mesa';
+
+        // Validation for Domicilio fields
+        if (serviceType === 'Domicilio') {
+            const phoneVal = phoneInput ? phoneInput.value.trim() : '';
+            const addressVal = addressInput ? addressInput.value.trim() : '';
+            if (!phoneVal || !addressVal) {
+                alert('Por favor ingresa tu número de celular y dirección de entrega antes de enviar el pedido.');
+                return;
+            }
+        }
+
         const isToGo = (serviceType === 'Domicilio' || serviceType === 'Mostrador');
         const packagingFee = isToGo ? (cart.length * 1000) : 0;
         let subtotal = 0;
@@ -493,6 +532,13 @@ document.addEventListener('DOMContentLoaded', () => {
             const cubiertosSelect = document.getElementById('cart-cubiertos');
             const cubiertosValue = cubiertosSelect ? cubiertosSelect.value : 'No necesito';
             orderText += `🍴 *Cubiertos:* ${cubiertosValue}\n`;
+        }
+
+        if (serviceType === 'Domicilio') {
+            const phoneVal = phoneInput ? phoneInput.value.trim() : '';
+            const addressVal = addressInput ? addressInput.value.trim() : '';
+            orderText += `📞 *Teléfono:* ${phoneVal}\n`;
+            orderText += `📍 *Dirección:* ${addressVal}\n`;
         }
 
         orderText += `💵 *TOTAL A PAGAR:* $${total.toLocaleString('es-CO')}\n\n`;
