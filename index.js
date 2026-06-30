@@ -3,16 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // MENÚ DEL DÍA (ACTUALIZAR DIARIAMENTE AQUÍ)
     // ==========================================
     const menuDelDia = {
-        sopa: 'Sancocho',
+        sopa: 'Sopa campesina',
         principios: [
-            'Ensalada semirrusa',
-            'Frijoles',
-            'Espaguetis'
+            'Ensalada de atún',
+            'Garbanzos rancheros',
+            'Frijoles caseros'
         ],
         acompanamientos: [
-            'Torta de mazorca',
-            'Puré de papa',
-            'Tajadas maduras'
+            'Puré de auyama',
+            'Deditos'
         ]
     };
 
@@ -163,14 +162,15 @@ document.addEventListener('DOMContentLoaded', () => {
             };
         }
         
-        // 18k dishes: arroz con pollo, arroz campesino, espagueti con pollo, espagueti boloñesa, creps de pollo
+        // 18k dishes: arroz con pollo, arroz campesino, arroz mixto, espagueti con pollo, espagueti boloñesa, creps de pollo
         // Only soup and side allowed (no principle, no salad)
         const is18kSpecial = lower.includes('arroz con pollo') || 
-                             lower.includes('arroz campesino') || 
-                             lower.includes('espagueti con pollo') || 
-                             lower.includes('espagueti boloñesa') || 
-                             lower.includes('creps de pollo') || 
-                             lower.includes('crep de pollo');
+                              lower.includes('arroz campesino') || 
+                              lower.includes('arroz mixto') || 
+                              lower.includes('espagueti con pollo') || 
+                              lower.includes('espagueti boloñesa') || 
+                              lower.includes('creps de pollo') || 
+                              lower.includes('crep de pollo');
                              
         if (is18kSpecial) {
             return {
