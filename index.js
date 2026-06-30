@@ -11,7 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         acompanamientos: [
             'Puré de auyama',
-            'Deditos'
+            'Deditos',
+            'Tajadas maduras'
         ]
     };
 
