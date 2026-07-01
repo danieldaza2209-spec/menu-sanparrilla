@@ -3,15 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // MENÚ DEL DÍA (ACTUALIZAR DIARIAMENTE AQUÍ)
     // ==========================================
     const menuDelDia = {
-        sopa: 'Sopa campesina',
+        sopa: 'Sopa de plátano',
         principios: [
-            'Ensalada de atún',
-            'Garbanzos rancheros',
+            'Verduras en crema de leche',
+            'Espaguetis napolitanos',
             'Frijoles caseros'
         ],
         acompanamientos: [
-            'Puré de auyama',
-            'Deditos',
+            'Arepuelas',
+            'Maduro pícaro',
             'Tajadas maduras'
         ]
     };
@@ -169,7 +169,9 @@ document.addEventListener('DOMContentLoaded', () => {
                               lower.includes('arroz campesino') || 
                               lower.includes('arroz mixto') || 
                               lower.includes('espagueti con pollo') || 
+                              lower.includes('espaguetis con pollo') || 
                               lower.includes('espagueti boloñesa') || 
+                              lower.includes('espaguetis boloñesa') || 
                               lower.includes('creps de pollo') || 
                               lower.includes('crep de pollo');
                              
