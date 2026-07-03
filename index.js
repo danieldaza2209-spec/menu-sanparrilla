@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         acompanamientos: [
             'Moneditas de plátano verde',
-            'Torta de auyama',
+            'Papa en salsa criolla',
             'Tajadas maduras'
         ]
     };
