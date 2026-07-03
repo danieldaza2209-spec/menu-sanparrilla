@@ -3,15 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // MENÚ DEL DÍA (ACTUALIZAR DIARIAMENTE AQUÍ)
     // ==========================================
     const menuDelDia = {
-        sopa: 'Sopa de arroz',
+        sopa: 'Sancocho',
         principios: [
-            'Ensalada hawaiana',
-            'Arvejas caseras',
+            'Ensalada primaveral',
+            'Lentejas caseras',
             'Frijoles caseros'
         ],
         acompanamientos: [
-            'Puré de papa',
-            'Pataconcitos',
+            'Moneditas de plátano verde',
+            'Torta de auyama',
             'Tajadas maduras'
         ]
     };
@@ -163,11 +163,12 @@ document.addEventListener('DOMContentLoaded', () => {
             };
         }
         
-        // 18k dishes: arroz con pollo, arroz campesino, arroz mixto, espagueti con pollo, espagueti boloñesa, creps de pollo
+        // 18k dishes: arroz con pollo, arroz campesino, arroz mixto, arroz paisa, espagueti con pollo, espagueti boloñesa, creps de pollo
         // Only soup and side allowed (no principle, no salad)
         const is18kSpecial = lower.includes('arroz con pollo') || 
                               lower.includes('arroz campesino') || 
                               lower.includes('arroz mixto') || 
+                              lower.includes('arroz paisa') || 
                               lower.includes('espagueti con pollo') || 
                               lower.includes('espaguetis con pollo') || 
                               lower.includes('espagueti boloñesa') || 
