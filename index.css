@@ -2,34 +2,34 @@
 
 :root {
     /* Color Palette Bases (RGB) */
-    --mauve-shadow-rgb: 121, 85, 72; /* Warm brown */
-    --dusty-lavender-rgb: 255, 215, 0; /* Brilliant gold */
-    --lilac-ash-rgb: 128, 128, 128; /* Ash grey */
-    --tea-green-rgb: 76, 175, 80; /* Vibrant green */
-    --ash-grey-rgb: 128, 128, 128; /* Ash grey */
+    --black-forest-rgb: 40, 54, 24;
+    --olive-leaf-rgb: 96, 108, 56;
+    --cornsilk-rgb: 254, 250, 224;
+    --sunlit-clay-rgb: 221, 161, 94;
+    --copperwood-rgb: 188, 108, 37;
 
     /* Colors */
-    --bg-primary: #18110e; /* Dark chocolate/charcoal base */
-    --bg-secondary: #261b16; /* Warm brown */
-    --bg-card: rgba(var(--mauve-shadow-rgb), 0.25);
+    --bg-primary: #12190b; /* Deep Black Forest for high contrast background */
+    --bg-secondary: #283618; /* Black Forest */
+    --bg-card: rgba(40, 54, 24, 0.6); /* Translucent Black Forest */
     
-    --glass-bg: rgba(38, 27, 22, 0.85);
-    --glass-border: rgba(var(--mauve-shadow-rgb), 0.3);
-    --glass-glow: rgba(var(--dusty-lavender-rgb), 0.05);
+    --glass-bg: rgba(40, 54, 24, 0.85);
+    --glass-border: rgba(96, 108, 56, 0.4); /* Olive leaf border */
+    --glass-glow: rgba(221, 161, 94, 0.05); /* Sunlit clay glow */
     
-    --primary: #FFD700; /* Vibrant Gold */
-    --primary-light: #ffe240;
-    --primary-glow: rgba(var(--dusty-lavender-rgb), 0.45);
+    --primary: #dda15e; /* Sunlit clay (Gold highlight) */
+    --primary-light: #fefae0; /* Cornsilk (Light highlight) */
+    --primary-glow: rgba(221, 161, 94, 0.4);
     
-    --accent: #4CAF50; /* Vibrant Green */
-    --accent-gold: #FFD700; /* Gold */
-    --accent-cream: #FFFFF0; /* Ivory */
+    --accent: #606c38; /* Olive leaf */
+    --accent-gold: #dda15e; /* Sunlit clay */
+    --accent-cream: #fefae0; /* Cornsilk */
     
-    --text-main: #FFFFF0; /* Pure Ivory - high contrast */
-    --text-muted: #b5beb3; /* Grey-green readable text */
+    --text-main: #ffffff; /* White text as requested */
+    --text-muted: #c2c9bc; /* Soft grey-green readable text */
     
-    --success: #4CAF50;
-    --success-glow: rgba(var(--tea-green-rgb), 0.2);
+    --success: #606c38;
+    --success-glow: rgba(96, 108, 56, 0.2);
     --danger: #e74c3c;
     
     /* Layout */
@@ -71,9 +71,9 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 10% 15%, rgba(var(--dusty-lavender-rgb), 0.12) 0%, transparent 45%),
-                radial-gradient(circle at 85% 70%, rgba(var(--tea-green-rgb), 0.08) 0%, transparent 45%),
-                radial-gradient(circle at 50% 40%, rgba(var(--mauve-shadow-rgb), 0.8) 0%, transparent 100%);
+    background: radial-gradient(circle at 10% 15%, rgba(var(--olive-leaf-rgb), 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 70%, rgba(var(--sunlit-clay-rgb), 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 40%, rgba(var(--black-forest-rgb), 0.9) 0%, transparent 100%);
     pointer-events: none;
     z-index: -1;
 }

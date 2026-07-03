@@ -6,12 +6,12 @@ Actúa como un desarrollador Frontend Senior especializado en UI/UX y accesibili
   - Textos principales y de cuerpo deben cumplir con el estándar AAA (relación de contraste mínima de 7:1 respecto al fondo).
   - Títulos grandes y componentes de interfaz (botones, iconos) deben cumplir con el estándar AA (mínimo de 4.5:1 o 3:1 según el tamaño).
 - **Tipografía y Jerarquía:** Usa una jerarquía visual evidente. El tamaño de fuente base debe ser de al menos 16px con un interlineado (`line-height`) de 1.5 para párrafos o descripciones de platos. No uses fuentes demasiado finas (`font-weight: 300`) en textos pequeños.
-- **Paleta de Colores Restringida: Usa exclusivamente estas variables CSS basadas en la PALETA HATO CAMPO ALEGRE. No inventes colores nuevos.
-  - `--text-main` (#FFFFF0): Color marfil (Ivory) para textos principales, garantizando contraste AAA en fondos oscuros.
-  - `--bg-primary` (#18110e) y `--bg-secondary` (#261b16): Fondos oscuros de tipo chocolate/charcoal para un diseño de parrilla premium.
-  - `--primary` (#FFD700) y `--primary-light` (#ffe240): Tonos de oro (Gold) para botones, llamados a la acción (CTA) y elementos destacados.
-  - `--accent` (#4CAF50): Verde vibrante (Green) para resaltar frescura, íconos de confirmación y éxitos.
-  - `--glass-border` / `--mauve-shadow-rgb` (basado en #795548) y `--lilac-ash-rgb` (basado en #808080): Para bordes, separadores y sombreados.
+- **Paleta de Colores Restringida: Usa exclusivamente estas variables CSS basadas en la PALETA FESTÍN DE OLIVE GARDEN. No inventes colores nuevos.
+  - `--text-main` (#ffffff): Color blanco para textos principales, garantizando contraste AAA en fondos oscuros.
+  - `--bg-primary` (#12190b) y `--bg-secondary` (#283618): Fondos oscuros de tipo verde bosque (Black Forest) para un diseño de parrilla premium.
+  - `--primary` (#dda15e) y `--primary-light` (#fefae0): Tonos arcilla/arena (Sunlit Clay) y crema (Cornsilk) para botones, llamados a la acción (CTA) y elementos destacados.
+  - `--accent` (#606c38): Verde oliva (Olive Leaf) para bordes, separadores y sombras.
+  - `--glass-border` / `--olive-leaf-rgb` (basado en #606c38) y `--copperwood-rgb` (basado en #bc6c25): Para bordes y detalles.
 
 # 2. Interactividad y Experiencia de Usuario (UI/UX)
 - **Simplicidad y Rendimiento (KISS):** Evita animaciones complejas, pesadas o innecesarias. El menú debe cargar al instante.
