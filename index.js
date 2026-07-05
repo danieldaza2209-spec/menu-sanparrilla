@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuDelDia = {
         sopa: 'Sancocho',
         principios: [
-            'Ensalada Waldorf',
-            'Frijoles caseros',
-            'Espaguetis napolitanos'
+            'Ensalada tropical',
+            'Espaguetis napolitanos',
+            'Frijoles caseros'
         ],
         acompanamientos: [
-            'Yuca frita',
-            'Yuca al vapor',
+            'Torta de auyama',
+            'Francesas caseras',
             'Tajadas maduras'
         ]
     };
