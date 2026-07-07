@@ -3,15 +3,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // MENÚ DEL DÍA (ACTUALIZAR DIARIAMENTE AQUÍ)
     // ==========================================
     const menuDelDia = {
-        sopa: 'Sopa campesina',
+        sopa: 'Sopa de arroz',
         principios: [
-            'Calabacín al huevo',
+            'Ensalada de atún',
             'Frijoles caseros',
-            'Lentejas caseras'
+            'Garbanzos rancheros'
         ],
         acompanamientos: [
-            'Puré de auyama',
-            'Deditos',
+            'Francesa casera',
+            'Maduro pícaro',
             'Tajadas maduras'
         ]
     };
@@ -81,24 +81,30 @@ document.addEventListener('DOMContentLoaded', () => {
     // Name Field
     const nameInput = document.getElementById('cart-name');
 
-    // Restore and save delivery data to localStorage
+    // Restore and save delivery data to localStorage (listening to both input and change for autocomplete compatibility)
     if (nameInput) {
         nameInput.value = localStorage.getItem('san_parrilla_name') || '';
-        nameInput.addEventListener('input', (e) => {
+        const saveName = (e) => {
             localStorage.setItem('san_parrilla_name', e.target.value);
-        });
+        };
+        nameInput.addEventListener('input', saveName);
+        nameInput.addEventListener('change', saveName);
     }
     if (phoneInput) {
         phoneInput.value = localStorage.getItem('san_parrilla_phone') || '';
-        phoneInput.addEventListener('input', (e) => {
+        const savePhone = (e) => {
             localStorage.setItem('san_parrilla_phone', e.target.value);
-        });
+        };
+        phoneInput.addEventListener('input', savePhone);
+        phoneInput.addEventListener('change', savePhone);
     }
     if (addressInput) {
         addressInput.value = localStorage.getItem('san_parrilla_address') || '';
-        addressInput.addEventListener('input', (e) => {
+        const saveAddress = (e) => {
             localStorage.setItem('san_parrilla_address', e.target.value);
-        });
+        };
+        addressInput.addEventListener('input', saveAddress);
+        addressInput.addEventListener('change', saveAddress);
     }
 
     // Add item to cart event delegator or direct binding

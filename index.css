@@ -851,8 +851,8 @@ a {
 
 .cart-service-selector select,
 .cart-service-selector input {
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px solid var(--glass-border);
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     color: #ffffff;
     padding: 0.35rem 0.6rem;
     border-radius: 4px;
@@ -910,8 +910,8 @@ a {
 }
 
 .cart-domicilio-fields input {
-    background: rgba(0, 0, 0, 0.4);
-    border: 1px solid var(--glass-border);
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.25);
     color: #ffffff;
     padding: 0.35rem 0.6rem;
     border-radius: 4px;
@@ -1195,8 +1195,10 @@ a {
         padding: 0.7rem 1.4rem;
         border-radius: 8px;
         font-size: 1.7rem;
-        width: 360px;
+        width: 550px;
         height: 58px; /* Large touch target */
+        border: 2px solid rgba(255, 255, 255, 0.35); /* High contrast border on mobile */
+        background: rgba(0, 0, 0, 0.65); /* Darker background for depth */
     }
 
     #name-selector-container {
@@ -1224,8 +1226,10 @@ a {
         padding: 0.7rem 1.4rem;
         border-radius: 8px;
         font-size: 1.7rem;
-        width: 360px;
+        width: 550px;
         height: 58px;
+        border: 2px solid rgba(255, 255, 255, 0.35); /* High contrast border on mobile */
+        background: rgba(0, 0, 0, 0.65); /* Darker background for depth */
     }
 
     .cart-pricing-summary {
