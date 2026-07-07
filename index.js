@@ -78,7 +78,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const addressInput = document.getElementById('cart-address');
     const domicilioContainer = document.getElementById('domicilio-fields-container');
 
+    // Name Field
+    const nameInput = document.getElementById('cart-name');
+
     // Restore and save delivery data to localStorage
+    if (nameInput) {
+        nameInput.value = localStorage.getItem('san_parrilla_name') || '';
+        nameInput.addEventListener('input', (e) => {
+            localStorage.setItem('san_parrilla_name', e.target.value);
+        });
+    }
     if (phoneInput) {
         phoneInput.value = localStorage.getItem('san_parrilla_phone') || '';
         phoneInput.addEventListener('input', (e) => {
@@ -484,6 +493,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const serviceType = serviceTypeSelect ? serviceTypeSelect.value : 'Mesa';
 
+        // Validation for Name field
+        const nameVal = nameInput ? nameInput.value.trim() : '';
+        if (!nameVal) {
+            alert('Por favor ingresa tu nombre antes de enviar el pedido.');
+            return;
+        }
+
         // Validation for Domicilio fields
         if (serviceType === 'Domicilio') {
             const phoneVal = phoneInput ? phoneInput.value.trim() : '';
@@ -505,7 +521,8 @@ document.addEventListener('DOMContentLoaded', () => {
         let serviceEmoji = '🍽️';
         if (serviceType === 'Domicilio') serviceEmoji = '🛵';
         if (serviceType === 'Mostrador') serviceEmoji = '🛍️';
-        orderText += `${serviceEmoji} *Tipo de Servicio:* ${serviceType}\n\n`;
+        orderText += `${serviceEmoji} *Tipo de Servicio:* ${serviceType}\n`;
+        orderText += `👤 *Cliente:* ${nameVal}\n\n`;
 
         cart.forEach((item, index) => {
             orderText += `*${index + 1}. ${item.name}* ($${item.price.toLocaleString('es-CO')})\n`;
