@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 applyTheme(savedTheme);
             } else {
                 // Predeterminado
-                applyTheme('olive-garden');
+                applyTheme('terracota');
             }
         }
     };
@@ -36,15 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // MENÚ DEL DÍA (ACTUALIZAR DIARIAMENTE AQUÍ)
     // ==========================================
     const menuDelDia = {
-        sopa: 'Sopa de arroz',
+        sopa: 'Sopa de plátano',
         principios: [
-            'Ensalada de atún',
-            'Frijoles caseros',
-            'Garbanzos rancheros'
+            'Verduras en crema de leche',
+            'Espaguetis napolitanos',
+            'Frijoles caseros'
         ],
         acompanamientos: [
-            'Francesa casera',
-            'Maduro pícaro',
+            'Arepuelas',
+            'Torta de zanahoria',
             'Tajadas maduras'
         ]
     };
