@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'Frijoles caseros'
         ],
         acompanamientos: [
-            'Arepuelas',
+            'Moneditas de plátano verde',
             'Torta de zanahoria',
             'Tajadas maduras'
         ]
