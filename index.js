@@ -1,5 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
     // ==========================================
+    // CONTROL DE TEMAS Y PALETAS DE COLORES
+    // ==========================================
+    const initTheme = () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const themeParam = urlParams.get('theme');
+        
+        if (themeParam) {
+            // Si viene por URL (?theme=campo-alegre), guardarlo en localStorage
+            localStorage.setItem('selected-theme', themeParam);
+            applyTheme(themeParam);
+        } else {
+            // Si no viene por URL, buscar en localStorage
+            const savedTheme = localStorage.getItem('selected-theme');
+            if (savedTheme) {
+                applyTheme(savedTheme);
+            } else {
+                // Predeterminado
+                applyTheme('olive-garden');
+            }
+        }
+    };
+
+    const applyTheme = (themeName) => {
+        // Quitar cualquier clase previa de tema de forma dinámica
+        document.body.className = document.body.className.replace(/\btheme-[a-zA-Z0-9-]+\b/g, '').trim();
+        // Agregar la seleccionada
+        document.body.classList.add(`theme-${themeName}`);
+    };
+
+    // Inicializar tema
+    initTheme();
+
+    // ==========================================
     // MENÚ DEL DÍA (ACTUALIZAR DIARIAMENTE AQUÍ)
     // ==========================================
     const menuDelDia = {

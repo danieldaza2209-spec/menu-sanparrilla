@@ -1,12 +1,11 @@
 /* CSS DESIGN SYSTEM - SAN PARRILLA */
 
-:root {
+body.theme-olive-garden, :root:not([class*="theme-"]) {
     /* Color Palette Bases (RGB) */
-    --black-forest-rgb: 40, 54, 24;
-    --olive-leaf-rgb: 96, 108, 56;
-    --cornsilk-rgb: 254, 250, 224;
-    --sunlit-clay-rgb: 221, 161, 94;
-    --copperwood-rgb: 188, 108, 37;
+    --bg-primary-rgb: 18, 25, 11;
+    --bg-secondary-rgb: 40, 54, 24;
+    --primary-rgb: 221, 161, 94;
+    --accent-rgb: 96, 108, 56;
 
     /* Colors */
     --bg-primary: #12190b; /* Deep Black Forest for high contrast background */
@@ -31,7 +30,74 @@
     --success: #606c38;
     --success-glow: rgba(96, 108, 56, 0.2);
     --danger: #e74c3c;
+}
+
+body.theme-campo-alegre {
+    /* Color Palette Bases (RGB) */
+    --bg-primary-rgb: 24, 17, 14;
+    --bg-secondary-rgb: 38, 27, 22;
+    --primary-rgb: 255, 215, 0;
+    --accent-rgb: 76, 175, 80;
+
+    /* Colors */
+    --bg-primary: #18110e; /* Dark chocolate/charcoal base */
+    --bg-secondary: #261b16; /* Warm brown */
+    --bg-card: rgba(121, 85, 72, 0.25);
     
+    --glass-bg: rgba(38, 27, 22, 0.85);
+    --glass-border: rgba(121, 85, 72, 0.3);
+    --glass-glow: rgba(255, 215, 0, 0.05);
+    
+    --primary: #FFD700; /* Vibrant Gold */
+    --primary-light: #ffe240;
+    --primary-glow: rgba(255, 215, 0, 0.45);
+    
+    --accent: #4CAF50; /* Vibrant Green */
+    --accent-gold: #FFD700; /* Gold */
+    --accent-cream: #FFFFF0; /* Ivory */
+    
+    --text-main: #FFFFF0; /* Pure Ivory - high contrast */
+    --text-muted: #b5beb3; /* Grey-green readable text */
+    
+    --success: #4CAF50;
+    --success-glow: rgba(76, 175, 80, 0.2);
+    --danger: #e74c3c;
+}
+
+body.theme-terracota {
+    /* Color Palette Bases (RGB) */
+    --bg-primary-rgb: 28, 14, 14;
+    --bg-secondary-rgb: 86, 44, 44;
+    --primary-rgb: 242, 84, 45;
+    --accent-rgb: 14, 149, 148;
+
+    /* Colors */
+    --bg-primary: #1c0e0e; /* Dark espresso base */
+    --bg-secondary: #3a1e1e; /* Espresso shade */
+    --bg-card: rgba(86, 44, 44, 0.35);
+    
+    --glass-bg: rgba(86, 44, 44, 0.85);
+    --glass-border: rgba(18, 116, 117, 0.3); /* Stormy teal border */
+    --glass-glow: rgba(242, 84, 45, 0.05); /* Fiery terracotta glow */
+    
+    --primary: #f2542d; /* Fiery terracotta */
+    --primary-light: #f5dfbb; /* Wheat */
+    --primary-glow: rgba(242, 84, 45, 0.4);
+    
+    --accent: #0e9594; /* Dark cyan / Teal */
+    --accent-gold: #f2542d;
+    --accent-cream: #f5dfbb;
+    
+    --text-main: #f5dfbb; /* Wheat - high contrast AAA */
+    --text-muted: #b8a892; /* Muted wheat */
+    
+    --success: #0e9594;
+    --success-glow: rgba(14, 149, 148, 0.2);
+    --danger: #e74c3c;
+}
+
+
+:root {
     /* Layout */
     --header-height: 85px;
     --border-radius-sm: 8px;
@@ -71,9 +137,9 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at 10% 15%, rgba(var(--olive-leaf-rgb), 0.15) 0%, transparent 50%),
-                radial-gradient(circle at 85% 70%, rgba(var(--sunlit-clay-rgb), 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 50% 40%, rgba(var(--black-forest-rgb), 0.9) 0%, transparent 100%);
+    background: radial-gradient(circle at 10% 15%, rgba(var(--accent-rgb), 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 85% 70%, rgba(var(--primary-rgb), 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 50% 40%, rgba(var(--bg-secondary-rgb), 0.9) 0%, transparent 100%);
     pointer-events: none;
     z-index: -1;
 }
@@ -249,14 +315,14 @@ a {
 }
 
 .badge {
-    background: rgba(var(--dusty-lavender-rgb), 0.15);
+    background: rgba(var(--primary-rgb), 0.15);
     color: var(--primary-light);
     padding: 0.4rem 0.9rem;
     border-radius: 50px;
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.08em;
-    border: 1px solid rgba(var(--dusty-lavender-rgb), 0.25);
+    border: 1px solid rgba(var(--primary-rgb), 0.25);
     display: inline-block;
     margin-bottom: 0.4rem;
 }
@@ -341,13 +407,13 @@ a {
 
 .special-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(var(--dusty-lavender-rgb), 0.3);
-    box-shadow: 0 10px 25px rgba(var(--dusty-lavender-rgb), 0.05);
+    border-color: rgba(var(--primary-rgb), 0.3);
+    box-shadow: 0 10px 25px rgba(var(--primary-rgb), 0.05);
 }
 
 .card-icon-header {
-    background: rgba(var(--dusty-lavender-rgb), 0.08);
-    border: 1px solid rgba(var(--dusty-lavender-rgb), 0.2);
+    background: rgba(var(--primary-rgb), 0.08);
+    border: 1px solid rgba(var(--primary-rgb), 0.2);
     border-radius: 50%;
     width: 60px;
     height: 60px;
@@ -433,7 +499,7 @@ a {
 
 .price-tier-card:hover {
     transform: translateY(-4px);
-    border-color: rgba(var(--dusty-lavender-rgb), 0.3);
+    border-color: rgba(var(--primary-rgb), 0.3);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
 }
 
@@ -493,8 +559,8 @@ a {
 }
 
 .btn-add-fast {
-    background: rgba(var(--dusty-lavender-rgb), 0.1);
-    border: 1px solid rgba(var(--dusty-lavender-rgb), 0.2);
+    background: rgba(var(--primary-rgb), 0.1);
+    border: 1px solid rgba(var(--primary-rgb), 0.2);
     color: var(--primary-light);
     width: 28px;
     height: 28px;
@@ -543,7 +609,7 @@ a {
 
 .picada-item-card:hover {
     transform: translateY(-3px);
-    border-color: rgba(var(--dusty-lavender-rgb), 0.25);
+    border-color: rgba(var(--primary-rgb), 0.25);
 }
 
 .picada-info h3 {
@@ -572,8 +638,8 @@ a {
 }
 
 .btn-add-cart {
-    background: rgba(var(--dusty-lavender-rgb), 0.1);
-    border: 1px solid rgba(var(--dusty-lavender-rgb), 0.2);
+    background: rgba(var(--primary-rgb), 0.1);
+    border: 1px solid rgba(var(--primary-rgb), 0.2);
     color: var(--primary-light);
     cursor: pointer;
     display: inline-flex;
@@ -657,7 +723,7 @@ a {
     -webkit-backdrop-filter: blur(20px);
     border: 1.5px solid var(--primary);
     border-radius: var(--border-radius-md);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(var(--dusty-lavender-rgb), 0.15);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(var(--primary-rgb), 0.15);
     overflow: hidden;
     transition: var(--transition-normal);
 }
@@ -668,7 +734,7 @@ a {
     align-items: center;
     padding: 1rem 1.5rem;
     cursor: pointer;
-    background: rgba(var(--dusty-lavender-rgb), 0.05);
+    background: rgba(var(--primary-rgb), 0.05);
 }
 
 .cart-info-left {
@@ -753,7 +819,7 @@ a {
 
 .cart-item-container:hover {
     background: rgba(255, 255, 255, 0.04);
-    border-color: rgba(var(--dusty-lavender-rgb), 0.15);
+    border-color: rgba(var(--primary-rgb), 0.15);
 }
 
 .cart-item-row {
@@ -991,7 +1057,7 @@ a {
 /* Flicker Animation */
 @keyframes flame-flicker {
     0% { transform: scale(1) rotate(0deg); opacity: 0.9; }
-    100% { transform: scale(1.08) rotate(3deg); opacity: 1; filter: drop-shadow(0 0 10px rgba(var(--dusty-lavender-rgb), 0.6)); }
+    100% { transform: scale(1.08) rotate(3deg); opacity: 1; filter: drop-shadow(0 0 10px rgba(var(--primary-rgb), 0.6)); }
 }
 
 /* Utilities */
@@ -1029,7 +1095,7 @@ a {
 }
 
 .day-only-badge {
-    background: rgba(var(--tea-green-rgb), 0.15); /* Light green tint */
+    background: rgba(var(--accent-rgb), 0.15); /* Light green tint */
     color: var(--accent); /* Accent green text */
     font-size: 0.65rem;
     font-weight: 700;
@@ -1077,7 +1143,7 @@ a {
         max-width: 98%;
         border-width: 3px;
         border-radius: 24px;
-        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(var(--dusty-lavender-rgb), 0.25);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), 0 0 25px rgba(var(--primary-rgb), 0.25);
     }
 
     .cart-summary-bar {
