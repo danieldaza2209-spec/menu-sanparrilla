@@ -44,7 +44,8 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         acompanamientos: [
             'Puré de papa',
-            'Pataconcitos'
+            'Pataconcitos',
+            'Tajadas maduras'
         ]
     };
 
