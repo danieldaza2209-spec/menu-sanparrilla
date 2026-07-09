@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 applyTheme(savedTheme);
             } else {
                 // Predeterminado
-                applyTheme('terracota');
+                applyTheme('campo-alegre');
             }
         }
     };
@@ -36,16 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // MENÚ DEL DÍA (ACTUALIZAR DIARIAMENTE AQUÍ)
     // ==========================================
     const menuDelDia = {
-        sopa: 'Sopa de plátano',
+        sopa: 'Sopa de fideos',
         principios: [
-            'Verduras en crema de leche',
-            'Espaguetis napolitanos',
+            'Ensalada hawaiana',
+            'Arvejas caseras',
             'Frijoles caseros'
         ],
         acompanamientos: [
-            'Moneditas de plátano verde',
-            'Torta de zanahoria',
-            'Tajadas maduras'
+            'Puré de papa',
+            'Pataconcitos'
         ]
     };
 
