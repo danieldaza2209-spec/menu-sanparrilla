@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // MENÚ DEL DÍA (ACTUALIZAR DIARIAMENTE AQUÍ)
     // ==========================================
     const menuDelDia = {
-        sopa: 'Sopa de fideos',
+        sopa: 'Sancocho',
         principios: [
             'Frijoles caseros',
             'Espaguetis napolitanos',
