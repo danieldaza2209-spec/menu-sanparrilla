@@ -40,11 +40,11 @@ document.addEventListener('DOMContentLoaded', () => {
         principios: [
             'Frijoles caseros',
             'Espaguetis napolitanos',
-            'Ensalada Waldorf'
+            'Ensalada tropical'
         ],
         acompanamientos: [
-            'Francesas caseras',
-            'Maduro con bocadillo',
+            'Yuca frita',
+            'Yuca al vapor',
             'Tajadas maduras'
         ]
     };
