@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 soup: true,
                 principle: false,
                 side: false,
-                salad: true
+                salad: false
             };
         }
         
