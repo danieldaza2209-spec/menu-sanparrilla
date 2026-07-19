@@ -191,6 +191,16 @@ document.addEventListener('DOMContentLoaded', () => {
     function getDisallowedOptions(name) {
         const lower = name.toLowerCase();
         
+        // Parrilla mixta has no principle and no side
+        if (lower.includes('parrilla mixta')) {
+            return {
+                soup: true,
+                principle: false,
+                side: false,
+                salad: true
+            };
+        }
+        
         // Bandeja paisa, Combo Personal or fish/seafood dishes have ALL options disallowed
         const isStructured = lower.includes('bandeja paisa') || 
                              lower.includes('combo personal') ||
