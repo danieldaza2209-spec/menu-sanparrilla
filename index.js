@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 applyTheme(savedTheme);
             } else {
                 // Predeterminado
-                applyTheme('olive-garden');
+                applyTheme('terracota');
             }
         }
     };
@@ -38,13 +38,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuDelDia = {
         sopa: 'Sancocho',
         principios: [
-            'Ensalada tropical',
+            'Ensalada semirusa',
             'Espaguetis',
             'Frijoles caseros'
         ],
         acompanamientos: [
-            'Yuca frita',
-            'Yuca al vapor',
+            'Torta de maduro',
+            'Deditos',
             'Tajadas maduras'
         ]
     };
