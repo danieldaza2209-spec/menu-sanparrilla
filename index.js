@@ -36,15 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // MENÚ DEL DÍA (ACTUALIZAR DIARIAMENTE AQUÍ)
     // ==========================================
     const menuDelDia = {
-        sopa: 'Campesina',
+        sopa: 'Sopa de plátano',
         principios: [
-            'Ensalada de atún',
-            'Garbanzos rancheros',
+            'Verduras en crema de leche',
+            'Espaguetis',
             'Frijoles caseros'
         ],
         acompanamientos: [
-            'Maduro pícaro',
-            'Francesas caseras',
+            'Arepuelas',
+            'Papa en salsa criolla',
             'Tajadas maduras'
         ]
     };
