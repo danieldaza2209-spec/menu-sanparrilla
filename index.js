@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'Espaguetis'
         ],
         acompanamientos: [
-            'Torta de zanahoria',
+            'Torta de maduro',
             'Francesas caseras',
             'Tajadas maduras'
         ]
