@@ -44,7 +44,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         acompanamientos: [
             'Papa encilantrada',
-            'Francesas caseras',
             'Tajadas maduras'
         ]
     };
