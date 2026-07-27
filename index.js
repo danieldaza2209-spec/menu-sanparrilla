@@ -36,14 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // MENÚ DEL DÍA (ACTUALIZAR DIARIAMENTE AQUÍ)
     // ==========================================
     const menuDelDia = {
-        sopa: 'Sancocho',
+        sopa: 'Campesina',
         principios: [
-            'Ensalada tropical',
-            'Frijoles caseros',
-            'Espaguetis'
+            'Habichuela al huevo',
+            'Lentejas caseras',
+            'Frijoles caseros'
         ],
         acompanamientos: [
-            'Papa encilantrada',
+            'Puré de ahuyama',
+            'Deditos',
             'Tajadas maduras'
         ]
     };
