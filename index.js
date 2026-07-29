@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         acompanamientos: [
             'Arepuelas',
-            'Papa en salsa criolla',
+            'Papa encilantrada',
             'Tajadas maduras'
         ]
     };
