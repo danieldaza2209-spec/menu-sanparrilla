@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 applyTheme(savedTheme);
             } else {
                 // Predeterminado
-                applyTheme('campo-alegre');
+                applyTheme('olive-garden');
             }
         }
     };
@@ -36,15 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // MENÚ DEL DÍA (ACTUALIZAR DIARIAMENTE AQUÍ)
     // ==========================================
     const menuDelDia = {
-        sopa: 'Fideos',
+        sopa: 'Sancocho',
         principios: [
-            'Ensalada hawaiana',
-            'Arvejas caseras',
+            'Ensalada primaveral',
+            'Lentejas caseras',
             'Frijoles caseros'
         ],
         acompanamientos: [
-            'Puré de papa',
-            'Maduro al horno',
+            'Criollas doraditas',
+            'Torta de mazorca',
             'Tajadas maduras'
         ]
     };
