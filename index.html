@@ -10,15 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="index.css?v=79">
-    <link rel="icon" type="image/png" href="logo.png?v=79">
+    <link rel="stylesheet" href="index.css?v=80">
+    <link rel="icon" type="image/png" href="logo.png?v=80">
 </head>
 <body class="theme-olive-garden">
     <!-- Navigation Header -->
     <header class="app-header">
         <div class="header-container">
             <div class="brand">
-                <img src="logo.png?v=79" alt="San Parrilla Logo" class="brand-logo">
+                <img src="logo.png?v=80" alt="San Parrilla Logo" class="brand-logo">
                 <span class="brand-name">San <span class="accent">Parrilla</span></span>
             </div>
             <nav class="nav-links">
@@ -61,7 +61,7 @@
                     </div>
                     <div class="special-card-body">
                         <h3>SOPA DEL DÍA</h3>
-                        <div class="special-highlight" id="daily-soup-display">Sancocho</div>
+                        <div class="special-highlight" id="daily-soup-display">Campesina</div>
                         <p class="special-desc">Con el sabor casero tradicional de nuestro fogón.</p>
                     </div>
                 </div>
@@ -76,11 +76,11 @@
                         <ul class="special-list" id="daily-principles-display">
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
-                                <span>Ensalada tropical</span>
+                                <span>Calabacín al huevo</span>
                             </li>
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
-                                <span>Espaguetis</span>
+                                <span>Lentejas caseras</span>
                             </li>
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
@@ -100,11 +100,11 @@
                         <ul class="special-list" id="daily-sides-display">
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
-                                <span>Yuca frita</span>
+                                <span>Deditos</span>
                             </li>
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
-                                <span>Yuca al vapor</span>
+                                <span>Puré de ahuyama</span>
                             </li>
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
@@ -174,6 +174,31 @@
                             </button>
                         </li>
                     </ul>
+                    
+                    <!-- Sección Especial: Solo por hoy -->
+                    <div class="special-day-box">
+                        <span class="special-day-badge">⭐ SOLO POR HOY</span>
+                        <ul class="tier-items-list special-items-list">
+                            <li>
+                                <span class="item-name">Carne molida con tocineta</span>
+                                <button class="btn-add-fast btn-add-cart" data-name="Carne molida con tocineta" data-price="16500">
+                                    <i data-lucide="plus"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <span class="item-name">Lomo en salsa bechamel</span>
+                                <button class="btn-add-fast btn-add-cart" data-name="Lomo en salsa bechamel" data-price="16500">
+                                    <i data-lucide="plus"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <span class="item-name">Hígado al ajillo</span>
+                                <button class="btn-add-fast btn-add-cart" data-name="Hígado al ajillo" data-price="16500">
+                                    <i data-lucide="plus"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Tier 2: $17.500 -->
@@ -300,32 +325,8 @@
                             </button>
                         </li>
                         <li>
-                            <span class="item-name">Sancocho de gallina</span>
-                            <button class="btn-add-fast btn-add-cart" data-name="Sancocho de gallina" data-price="18000">
-                                <i data-lucide="plus"></i>
-                            </button>
-                        </li>
-                        <li>
-                            <span class="item-name">Espaguetis con pollo</span>
-                            <button class="btn-add-fast btn-add-cart" data-name="Espaguetis con pollo" data-price="18000">
-                                <i data-lucide="plus"></i>
-                            </button>
-                        </li>
-                        <li>
-                            <span class="item-name">Espaguetis boloñesa</span>
-                            <button class="btn-add-fast btn-add-cart" data-name="Espaguetis boloñesa" data-price="18000">
-                                <i data-lucide="plus"></i>
-                            </button>
-                        </li>
-                        <li>
-                            <span class="item-name">Arroz con pollo</span>
-                            <button class="btn-add-fast btn-add-cart" data-name="Arroz con pollo" data-price="18000">
-                                <i data-lucide="plus"></i>
-                            </button>
-                        </li>
-                        <li>
-                            <span class="item-name">Arroz campesino</span>
-                            <button class="btn-add-fast btn-add-cart" data-name="Arroz campesino" data-price="18000">
+                            <span class="item-name">Arroz ranchero <span class="day-only-badge">Solo los lunes</span></span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Arroz ranchero" data-price="18000">
                                 <i data-lucide="plus"></i>
                             </button>
                         </li>
@@ -706,7 +707,7 @@
     <footer class="app-footer">
         <div class="container footer-content">
             <div class="brand footer-brand">
-                <img src="logo.png?v=79" alt="San Parrilla Logo" class="brand-logo">
+                <img src="logo.png?v=80" alt="San Parrilla Logo" class="brand-logo">
                 <span class="brand-name">San <span class="accent">Parrilla</span></span>
             </div>
             <p>&copy; 2026 San Parrilla. Tradición de sabor a la brasa. Todos los derechos reservados.</p>
@@ -714,7 +715,7 @@
     </footer>
 
     <!-- JS Logic -->
-    <script src="index.js?v=79"></script>
+    <script src="index.js?v=80"></script>
     <script>
         // Initialize Icons
         lucide.createIcons();
