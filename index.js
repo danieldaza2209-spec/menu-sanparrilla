@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 applyTheme(savedTheme);
             } else {
                 // Predeterminado
-                applyTheme('olive-garden');
+                applyTheme('campo-alegre');
             }
         }
     };
