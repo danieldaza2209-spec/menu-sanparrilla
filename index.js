@@ -36,15 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // MENÚ DEL DÍA (ACTUALIZAR DIARIAMENTE AQUÍ)
     // ==========================================
     const menuDelDia = {
-        sopa: 'Sancocho',
+        sopa: 'Campesina',
         principios: [
-            'Ensalada semirrusa',
-            'Frijoles caseros',
-            'Espaguetis'
+            'Ensalada de atún',
+            'Garbanzos rancheros',
+            'Frijoles'
         ],
         acompanamientos: [
-            'Puré de papa',
-            'Maduro con bocadillo',
+            'Francesa casera',
+            'Torta de zanahoria',
             'Tajadas maduras'
         ]
     };
@@ -158,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function handleAddClick(e) {
         const btn = e.currentTarget;
+        if (btn.disabled || btn.classList.contains('disabled')) return;
         const name = btn.getAttribute('data-name');
         const price = parseInt(btn.getAttribute('data-price'), 10);
         addToCart(name, price);

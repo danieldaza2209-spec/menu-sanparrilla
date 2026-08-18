@@ -1094,6 +1094,40 @@ a {
     margin-top: 0.4rem;
 }
 
+
+.sold-out-badge {
+    background: rgba(231, 76, 60, 0.18);
+    color: #ff7b72;
+    border: 1px solid rgba(231, 76, 60, 0.35);
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.1rem 0.45rem;
+    border-radius: 4px;
+    margin-left: 0.5rem;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.item-sold-out .item-name {
+    color: var(--text-muted);
+    opacity: 0.65;
+    text-decoration: line-through;
+    text-decoration-color: rgba(231, 76, 60, 0.6);
+}
+
+.btn-add-fast:disabled,
+.btn-add-fast.disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    pointer-events: none;
+    background: rgba(128, 128, 128, 0.1);
+    border-color: rgba(128, 128, 128, 0.2);
+    color: var(--text-muted);
+    transform: none !important;
+}
+
 .day-only-badge {
     background: rgba(var(--accent-rgb), 0.15); /* Light green tint */
     color: var(--accent); /* Accent green text */
