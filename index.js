@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sopa: 'Fideos',
         principios: [
             'Ensalada hawaiana',
-            'Garbanzos rancheros',
+            'Arvejas caseras',
             'Frijoles caseros'
         ],
         acompanamientos: [
