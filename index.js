@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // MENÚ DEL DÍA (ACTUALIZAR DIARIAMENTE AQUÍ)
     // ==========================================
     const menuDelDia = {
-        sopa: 'Costilla',
+        sopa: 'Sancocho',
         principios: [
             'Ensalada Waldorf',
             'Espaguetis',
