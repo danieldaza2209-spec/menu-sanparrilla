@@ -36,15 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // MENÚ DEL DÍA (ACTUALIZAR DIARIAMENTE AQUÍ)
     // ==========================================
     const menuDelDia = {
-        sopa: 'Sancocho',
+        sopa: 'Costilla',
         principios: [
-            'Ensalada primaveral',
-            'Lentejas caseras',
+            'Ensalada Waldorf',
+            'Espaguetis',
             'Frijoles caseros'
         ],
         acompanamientos: [
-            'Moneditas de plátano verde',
-            'Papa encilantrada',
+            'Torta de mazorca',
+            'Francesa casera',
             'Tajadas maduras'
         ]
     };
