@@ -31,15 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // MENÚ DEL DÍA (ACTUALIZAR DIARIAMENTE AQUÍ)
     // ==========================================
     const menuDelDia = {
-        sopa: 'Campesina',
+        sopa: 'Arroz',
         principios: [
-            'Calabacín al huevo',
-            'Lentejas caseras',
-            'Fríjoles caseros'
+            'Ensalada de atún',
+            'Garbanzos rancheros',
+            'Frijoles caseros'
         ],
         acompanamientos: [
-            'Puré de ahuyama',
-            'Deditos',
+            'Francesa casera',
+            'Torta de zanahoria',
             'Tajadas maduras'
         ]
     };
