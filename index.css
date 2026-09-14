@@ -1,38 +1,6 @@
 /* CSS DESIGN SYSTEM - SAN PARRILLA */
 
-body.theme-campo-alegre, :root:not([class*="theme-"]) {
-    /* Color Palette Bases (RGB) */
-    --bg-primary-rgb: 24, 17, 14;
-    --bg-secondary-rgb: 38, 27, 22;
-    --primary-rgb: 255, 215, 0;
-    --accent-rgb: 76, 175, 80;
-
-    /* Colors */
-    --bg-primary: #18110e; /* Dark chocolate/charcoal base */
-    --bg-secondary: #261b16; /* Warm brown */
-    --bg-card: rgba(121, 85, 72, 0.25);
-    
-    --glass-bg: rgba(38, 27, 22, 0.85);
-    --glass-border: rgba(121, 85, 72, 0.3);
-    --glass-glow: rgba(255, 215, 0, 0.05);
-    
-    --primary: #FFD700; /* Vibrant Gold */
-    --primary-light: #ffe240;
-    --primary-glow: rgba(255, 215, 0, 0.45);
-    
-    --accent: #4CAF50; /* Vibrant Green */
-    --accent-gold: #FFD700; /* Gold */
-    --accent-cream: #FFFFF0; /* Ivory */
-    
-    --text-main: #FFFFF0; /* Pure Ivory - high contrast */
-    --text-muted: #b5beb3; /* Grey-green readable text */
-    
-    --success: #4CAF50;
-    --success-glow: rgba(76, 175, 80, 0.2);
-    --danger: #e74c3c;
-}
-
-body.theme-olive-garden {
+body.theme-olive-garden, :root:not([class*="theme-"]) {
     /* Color Palette Bases (RGB) */
     --bg-primary-rgb: 18, 25, 11;
     --bg-secondary-rgb: 40, 54, 24;
@@ -61,6 +29,38 @@ body.theme-olive-garden {
     
     --success: #606c38;
     --success-glow: rgba(96, 108, 56, 0.2);
+    --danger: #e74c3c;
+}
+
+body.theme-campo-alegre {
+    /* Color Palette Bases (RGB) */
+    --bg-primary-rgb: 24, 17, 14;
+    --bg-secondary-rgb: 38, 27, 22;
+    --primary-rgb: 255, 215, 0;
+    --accent-rgb: 76, 175, 80;
+
+    /* Colors */
+    --bg-primary: #18110e; /* Dark chocolate/charcoal base */
+    --bg-secondary: #261b16; /* Warm brown */
+    --bg-card: rgba(121, 85, 72, 0.25);
+    
+    --glass-bg: rgba(38, 27, 22, 0.85);
+    --glass-border: rgba(121, 85, 72, 0.3);
+    --glass-glow: rgba(255, 215, 0, 0.05);
+    
+    --primary: #FFD700; /* Vibrant Gold */
+    --primary-light: #ffe240;
+    --primary-glow: rgba(255, 215, 0, 0.45);
+    
+    --accent: #4CAF50; /* Vibrant Green */
+    --accent-gold: #FFD700; /* Gold */
+    --accent-cream: #FFFFF0; /* Ivory */
+    
+    --text-main: #FFFFF0; /* Pure Ivory - high contrast */
+    --text-muted: #b5beb3; /* Grey-green readable text */
+    
+    --success: #4CAF50;
+    --success-glow: rgba(76, 175, 80, 0.2);
     --danger: #e74c3c;
 }
 

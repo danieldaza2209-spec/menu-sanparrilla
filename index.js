@@ -11,14 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('selected-theme', themeParam);
             applyTheme(themeParam);
         } else {
-            // Si no viene por URL, buscar en localStorage
-            const savedTheme = localStorage.getItem('selected-theme');
-            if (savedTheme) {
-                applyTheme(savedTheme);
-            } else {
-                // Predeterminado
-                applyTheme('campo-alegre');
-            }
+            // Predeterminado: Verde Olivo (limpiar tema previo para asegurar actualización global)
+            localStorage.removeItem('selected-theme');
+            applyTheme('olive-garden');
         }
     };
 
