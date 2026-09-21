@@ -10,15 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="index.css?v=123">
-    <link rel="icon" type="image/png" href="logo.png?v=123">
+    <link rel="stylesheet" href="index.css?v=124">
+    <link rel="icon" type="image/png" href="logo.png?v=124">
 </head>
 <body class="theme-olive-garden">
     <!-- Navigation Header -->
     <header class="app-header">
         <div class="header-container">
             <div class="brand">
-                <img src="logo.png?v=123" alt="San Parrilla Logo" class="brand-logo">
+                <img src="logo.png?v=124" alt="San Parrilla Logo" class="brand-logo">
                 <span class="brand-name">San <span class="accent">Parrilla</span></span>
             </div>
             <nav class="nav-links">
@@ -143,16 +143,16 @@
                                 <i data-lucide="plus"></i>
                             </button>
                         </li>
-                        <li>
-                            <span class="item-name">Pernil frito</span>
-                            <button class="btn-add-fast btn-add-cart" data-name="Pernil frito" data-price="16500">
-                                <i data-lucide="plus"></i>
+                        <li class="item-sold-out">
+                            <span class="item-name">Pernil frito <span class="sold-out-badge">Agotado por hoy</span></span>
+                            <button class="btn-add-fast btn-add-cart disabled" data-name="Pernil frito" data-price="16500" disabled aria-disabled="true">
+                                <i data-lucide="slash"></i>
                             </button>
                         </li>
-                        <li>
-                            <span class="item-name">Pernil bbq</span>
-                            <button class="btn-add-fast btn-add-cart" data-name="Pernil bbq" data-price="16500">
-                                <i data-lucide="plus"></i>
+                        <li class="item-sold-out">
+                            <span class="item-name">Pernil bbq <span class="sold-out-badge">Agotado por hoy</span></span>
+                            <button class="btn-add-fast btn-add-cart disabled" data-name="Pernil bbq" data-price="16500" disabled aria-disabled="true">
+                                <i data-lucide="slash"></i>
                             </button>
                         </li>
                         <li>
@@ -243,10 +243,10 @@
                                 <i data-lucide="plus"></i>
                             </button>
                         </li>
-                        <li>
-                            <span class="item-name">Pernil hawaiano</span>
-                            <button class="btn-add-fast btn-add-cart" data-name="Pernil hawaiano" data-price="17500">
-                                <i data-lucide="plus"></i>
+                        <li class="item-sold-out">
+                            <span class="item-name">Pernil hawaiano <span class="sold-out-badge">Agotado por hoy</span></span>
+                            <button class="btn-add-fast btn-add-cart disabled" data-name="Pernil hawaiano" data-price="17500" disabled aria-disabled="true">
+                                <i data-lucide="slash"></i>
                             </button>
                         </li>
                         <li>
@@ -708,7 +708,7 @@
     <footer class="app-footer">
         <div class="container footer-content">
             <div class="brand footer-brand">
-                <img src="logo.png?v=123" alt="San Parrilla Logo" class="brand-logo">
+                <img src="logo.png?v=124" alt="San Parrilla Logo" class="brand-logo">
                 <span class="brand-name">San <span class="accent">Parrilla</span></span>
             </div>
             <p>&copy; 2026 San Parrilla. Tradición de sabor a la brasa. Todos los derechos reservados.</p>
@@ -716,7 +716,7 @@
     </footer>
 
     <!-- JS Logic -->
-    <script src="index.js?v=123"></script>
+    <script src="index.js?v=124"></script>
     <script>
         // Initialize Icons
         lucide.createIcons();
