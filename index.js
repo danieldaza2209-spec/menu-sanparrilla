@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuDelDia = {
         sopa: 'Campesina',
         principios: [
-            'Habichuelas al huevo',
+            'Calabacín al huevo',
             'Lentejas caseras',
             'Frijoles caseros'
         ],
