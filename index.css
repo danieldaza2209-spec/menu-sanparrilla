@@ -1,6 +1,6 @@
 /* CSS DESIGN SYSTEM - SAN PARRILLA */
 
-body.theme-olive-garden, :root:not([class*="theme-"]) {
+body.theme-olive-garden {
     /* Color Palette Bases (RGB) */
     --bg-primary-rgb: 18, 25, 11;
     --bg-secondary-rgb: 40, 54, 24;
@@ -64,7 +64,7 @@ body.theme-campo-alegre {
     --danger: #e74c3c;
 }
 
-body.theme-terracota {
+body.theme-terracota, :root:not([class*="theme-"]) {
     /* Color Palette Bases (RGB) */
     --bg-primary-rgb: 28, 14, 14;
     --bg-secondary-rgb: 86, 44, 44;

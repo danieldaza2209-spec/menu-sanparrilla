@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
             localStorage.setItem('selected-theme', themeParam);
             applyTheme(themeParam);
         } else {
-            // Predeterminado: Verde Olivo (limpiar tema previo para asegurar actualización global)
+            // Predeterminado: Terracota (limpiar tema previo para asegurar actualización global)
             localStorage.removeItem('selected-theme');
-            applyTheme('olive-garden');
+            applyTheme('terracota');
         }
     };
 
@@ -31,15 +31,15 @@ document.addEventListener('DOMContentLoaded', () => {
     // MENÚ DEL DÍA (ACTUALIZAR DIARIAMENTE AQUÍ)
     // ==========================================
     const menuDelDia = {
-        sopa: 'Plátano',
+        sopa: 'Fideos',
         principios: [
-            'Verduras en crema de leche',
-            'Espaguetis napolitanos',
+            'Ensalada hawaiana',
+            'Garbanzos rancheros',
             'Frijoles caseros'
         ],
         acompanamientos: [
-            'Arepuelas',
-            'Maduro pícaro',
+            'Puré de papa',
+            'Maduro al horno',
             'Tajadas maduras'
         ]
     };
