@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // MENÚ DEL DÍA (ACTUALIZAR DIARIAMENTE AQUÍ)
     // ==========================================
     const menuDelDia = {
-        sopa: 'Sancocho campesino',
+        sopa: 'Campesina',
         principios: [
             'Calabacín al huevo',
             'Lentejas caseras',
