@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'Fríjoles caseros'
         ],
         acompanamientos: [
-            'Papa encilantrada',
+            'Papa en salsa criolla',
             'Chips de plátano verde',
             'Tajadas maduras'
         ]
