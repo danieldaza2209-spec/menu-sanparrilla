@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         acompanamientos: [
             'Maduro cocido',
-            'Papa encebollada',
+            'Papa encilantrada',
             'Tajadas maduras'
         ]
     };
