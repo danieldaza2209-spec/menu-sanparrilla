@@ -2,33 +2,36 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=980">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>San Parrilla - Nuestro Menú</title>
     <!-- Google Fonts: Outfit (headings) & Inter (body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="index.css?v=161">
-    <link rel="icon" type="image/png" href="logo.png?v=161">
+    <link rel="stylesheet" href="index.css?v=162">
+    <link rel="icon" type="image/png" href="logo.png?v=162">
 </head>
-<body class="theme-terracota">
+<body>
     <!-- Navigation Header -->
     <header class="app-header">
         <div class="header-container">
-            <div class="brand">
-                <img src="logo.png?v=161" alt="San Parrilla Logo" class="brand-logo">
-                <span class="brand-name">San <span class="accent">Parrilla</span></span>
-            </div>
+            <a href="#" class="brand" aria-label="San Parrilla - Inicio">
+                <img src="logo.png?v=162" alt="San Parrilla Logo" class="brand-logo">
+                <div class="brand-text">
+                    <span class="brand-name">SAN <span class="accent">PARRILLA</span></span>
+                    <span class="brand-tagline">Sazón &amp; Fogón</span>
+                </div>
+            </a>
             <nav class="nav-links">
                 <a href="#menu-del-dia" class="nav-link">Especiales de Hoy</a>
                 <a href="#nuestro-menu" class="nav-link">Nuestro Menú</a>
                 <a href="#picadas" class="nav-link">Picadas</a>
             </nav>
             <div class="header-contact">
-                <a href="https://wa.me/573183821787" target="_blank" class="whatsapp-btn">
-                    <i data-lucide="phone"></i> <span>Pedir por WhatsApp</span>
+                <a href="https://wa.me/573183821787?text=Hola%20San%20Parrilla,%20deseo%20hacer%20un%20pedido" target="_blank" rel="noopener noreferrer" class="whatsapp-btn">
+                    <i data-lucide="message-circle"></i> <span>Pedir por WhatsApp</span>
                 </a>
             </div>
         </div>
@@ -40,7 +43,7 @@
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <span class="badge">🔥 TRADICIÓN Y SAZÓN CASERO</span>
-                <h1>Restaurante San Parrilla</h1>
+                <h1>Restaurante <span class="hero-highlight">San Parrilla</span></h1>
                 <p>Arma tu plato favorito con nuestra variedad de carnes, pescados y acompañamientos.</p>
             </div>
         </section>
@@ -602,9 +605,8 @@
 
                 <!-- Picada Berraca -->
                 <div class="picada-item-card berraca-card">
-                    <div class="berraca-glow"></div>
                     <div class="picada-info">
-                        <span class="badge-mini">¡La más buscada!</span>
+                        <span class="badge-mini">⭐ ¡La más buscada!</span>
                         <h3>Picada Berraca</h3>
                         <p>Chicharrón crujiente, costilla, lomo y papitas criollas.</p>
                     </div>
@@ -620,10 +622,10 @@
 
         <!-- FLOATING CART DRAWER -->
         <div id="cart-drawer" class="cart-drawer hidden">
-            <div class="cart-summary-bar" id="cart-summary-trigger">
+            <button type="button" class="cart-summary-bar" id="cart-summary-trigger" aria-expanded="false" aria-controls="cart-details-panel">
                 <div class="cart-info-left">
                     <i data-lucide="shopping-bag" class="cart-icon"></i>
-                    <span id="cart-count">0 items</span>
+                    <span id="cart-count">0 platos</span>
                     <span class="cart-separator">|</span>
                     <span id="cart-total" class="cart-total-text">$0</span>
                 </div>
@@ -631,52 +633,79 @@
                     <span>Ver mi pedido</span>
                     <i data-lucide="chevron-up" id="cart-chevron"></i>
                 </div>
-            </div>
+            </button>
             
             <div class="cart-details hidden" id="cart-details-panel">
                 <div class="cart-header-panel">
                     <h3>Tu Pedido</h3>
-                    <button id="clear-cart-btn" class="btn-clear">Vaciar</button>
+                    <button type="button" id="clear-cart-btn" class="btn-clear">Vaciar</button>
                 </div>
                 <div class="cart-items-list" id="cart-items-list">
                     <!-- Dynamic Cart Items go here -->
                 </div>
 
-                <!-- Nombre del Cliente -->
-                <div class="cart-service-selector" id="name-selector-container">
-                    <label for="cart-name">Nombre:</label>
-                    <input type="text" id="cart-name" placeholder="Ej: Daniel">
-                </div>
-
                 <!-- Tipo de Servicio -->
                 <div class="cart-service-selector">
-                    <label for="cart-service-type">Tipo de Servicio:</label>
+                    <label for="cart-service-type">Tipo de Servicio</label>
                     <select id="cart-service-type">
                         <option value="Mesa">Mesa (Comer en restaurante)</option>
                         <option value="Domicilio">Domicilio (A casa)</option>
-                        <option value="Mostrador">Mostrador (Recoger para llevar)</option>
+                        <option value="Recoger">Recoger (Para llevar)</option>
                     </select>
                 </div>
 
-                <!-- Cubiertos (Dinámico para Domicilio/Mostrador) -->
-                <div id="cubiertos-selector-container" class="cart-service-selector hidden">
-                    <label for="cart-cubiertos">Cubiertos:</label>
-                    <select id="cart-cubiertos">
-                        <option value="No necesito">No necesito</option>
-                        <option value="Incluir cubiertos">Incluir cubiertos</option>
-                    </select>
-                </div>
+                <!-- Datos del cliente, entrega y pago -->
+                <div class="cart-order-fields" id="cart-order-fields">
+                    <div class="cart-field">
+                        <label for="cart-customer-name">Nombre</label>
+                        <input type="text" id="cart-customer-name" autocomplete="name" placeholder="Tu nombre">
+                    </div>
+                    <div class="cart-field">
+                        <label for="cart-customer-phone">Teléfono</label>
+                        <input type="tel" id="cart-customer-phone" autocomplete="tel" inputmode="tel" placeholder="Ej: 300 123 4567">
+                    </div>
 
-                <!-- Datos de Domicilio (Dinámico para Domicilio) -->
-                <div id="domicilio-fields-container" class="cart-domicilio-fields hidden">
-                    <div class="input-group">
-                        <label for="cart-phone">Celular/Teléfono:</label>
-                        <input type="tel" id="cart-phone" placeholder="Ej: 3001234567">
+                    <!-- Solo Mesa -->
+                    <div class="cart-field hidden" id="field-table">
+                        <label for="cart-table-number">Número de mesa</label>
+                        <input type="text" id="cart-table-number" inputmode="numeric" maxlength="10" placeholder="Ej: 5">
                     </div>
-                    <div class="input-group">
-                        <label for="cart-address">Dirección:</label>
-                        <input type="text" id="cart-address" placeholder="Ej: Calle 10 # 5-20">
+
+                    <!-- Solo Domicilio -->
+                    <div class="cart-field hidden" id="field-address">
+                        <label for="cart-customer-address">Dirección completa</label>
+                        <input type="text" id="cart-customer-address" autocomplete="street-address" placeholder="Calle / Carrera, número, apto o casa">
                     </div>
+                    <div class="cart-field hidden" id="field-neighborhood">
+                        <label for="cart-customer-neighborhood">Barrio / Indicaciones de entrega</label>
+                        <input type="text" id="cart-customer-neighborhood" placeholder="Barrio y referencias para encontrarte">
+                    </div>
+                    <div class="cart-field hidden" id="field-cutlery">
+                        <label for="cart-cutlery">¿Incluir cubiertos plásticos?</label>
+                        <select id="cart-cutlery">
+                            <option value="No" selected>No</option>
+                            <option value="Sí">Sí</option>
+                        </select>
+                    </div>
+
+                    <!-- Método de pago -->
+                    <div class="cart-field">
+                        <label for="cart-payment-method">Método de pago</label>
+                        <select id="cart-payment-method">
+                            <option value="Efectivo">Efectivo</option>
+                            <option value="Nequi">Nequi</option>
+                            <option value="Daviplata">Daviplata</option>
+                            <option value="Bancolombia">Bancolombia</option>
+                        </select>
+                    </div>
+
+                    <!-- Solo Domicilio + Efectivo -->
+                    <div class="cart-field hidden" id="field-cash-amount">
+                        <label for="cart-cash-amount">¿Con cuánto vas a pagar? <span class="label-optional">(Opcional, para llevar cambio)</span></label>
+                        <input type="text" id="cart-cash-amount" inputmode="numeric" placeholder="Ej: 50000">
+                    </div>
+
+                    <p class="cart-form-error hidden" id="cart-form-error" role="alert"></p>
                 </div>
 
                 <!-- Desglose de Precios -->
@@ -685,7 +714,7 @@
                         <span>Subtotal:</span>
                         <span id="summary-subtotal">$0</span>
                     </div>
-                    <div class="summary-line" id="empaque-row">
+                    <div class="summary-line hidden" id="empaque-row">
                         <span>Empaque:</span>
                         <span id="summary-empaque">$0</span>
                     </div>
@@ -696,8 +725,8 @@
                 </div>
                 
                 <div class="cart-checkout-panel">
-                    <button class="btn btn-primary btn-block" id="whatsapp-checkout-btn">
-                        <i data-lucide="send"></i> Enviar pedido por WhatsApp
+                    <button type="button" class="btn btn-whatsapp-checkout btn-block" id="whatsapp-checkout-btn">
+                        <i data-lucide="send"></i> <span>Enviar pedido por WhatsApp</span>
                     </button>
                 </div>
             </div>
@@ -707,19 +736,25 @@
     <!-- Footer -->
     <footer class="app-footer">
         <div class="container footer-content">
-            <div class="brand footer-brand">
-                <img src="logo.png?v=161" alt="San Parrilla Logo" class="brand-logo">
-                <span class="brand-name">San <span class="accent">Parrilla</span></span>
+            <div class="footer-brand-info">
+                <span class="footer-brand-title">SAN PARRILLA</span>
+                <span class="footer-dot">•</span>
+                <span>Tradición &amp; Sazón Casero</span>
             </div>
-            <p>&copy; 2026 San Parrilla. Tradición de sabor a la brasa. Todos los derechos reservados.</p>
+            <a href="https://wa.me/573183821787?text=Hola%20San%20Parrilla,%20deseo%20hacer%20un%20pedido" target="_blank" rel="noopener noreferrer" class="footer-phone">
+                Domicilios: 318 382 1787
+            </a>
+            <p>&copy; 2026 San Parrilla. Todos los derechos reservados.</p>
         </div>
     </footer>
 
     <!-- JS Logic -->
-    <script src="index.js?v=161"></script>
+    <script src="index.js?v=162"></script>
     <script>
         // Initialize Icons
-        lucide.createIcons();
+        if (window.lucide) {
+            lucide.createIcons();
+        }
     </script>
 </body>
 </html>
