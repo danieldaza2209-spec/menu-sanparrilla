@@ -1434,6 +1434,14 @@ a {
     color: var(--primary);
 }
 
+.footer-phones {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 .footer-phone {
     font-weight: 600;
     transition: color var(--transition-fast);
@@ -1441,6 +1449,11 @@ a {
 
 .footer-phone:hover {
     color: var(--primary);
+}
+
+.footer-dot {
+    color: var(--primary);
+    opacity: 0.7;
 }
 
 /* Utilities */
