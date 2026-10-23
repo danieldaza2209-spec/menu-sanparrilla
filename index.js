@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuDelDia = {
         sopa: 'Fideos',
         principios: [
-            'Ensalada hawaiana',
-            'Arvejas caseras',
+            'Ensalada primaveral',
+            'Lentejas caseras',
             'Fríjoles caseros'
         ],
         acompanamientos: [
-            'Puré de papa',
-            'Arepuelas',
+            'Pataconcitos',
+            'Papa encilantrada',
             'Tajadas maduras'
         ]
     };
