@@ -10,15 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="index.css?v=174">
-    <link rel="icon" type="image/png" href="logo.png?v=174">
+    <link rel="stylesheet" href="index.css?v=175">
+    <link rel="icon" type="image/png" href="logo.png?v=175">
 </head>
 <body>
     <!-- Navigation Header -->
     <header class="app-header">
         <div class="header-container">
             <a href="#" class="brand" aria-label="San Parrilla - Inicio">
-                <img src="logo.png?v=174" alt="San Parrilla Logo" class="brand-logo">
+                <img src="logo.png?v=175" alt="San Parrilla Logo" class="brand-logo">
                 <div class="brand-text">
                     <span class="brand-name">SAN <span class="accent">PARRILLA</span></span>
                     <span class="brand-tagline">Sazón &amp; Fogón</span>
@@ -185,6 +185,12 @@
                                     <i data-lucide="plus"></i>
                                 </button>
                             </li>
+                            <li>
+                                <span class="item-name">Desgranado de carne</span>
+                                <button class="btn-add-fast btn-add-cart" data-name="Desgranado de carne" data-price="16500">
+                                    <i data-lucide="plus"></i>
+                                </button>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -334,10 +340,10 @@
                         <span class="tier-price">$21.000</span>
                     </div>
                     <ul class="tier-items-list">
-                        <li>
-                            <span class="item-name">Sobrebarriga dorada</span>
-                            <button class="btn-add-fast btn-add-cart" data-name="Sobrebarriga dorada" data-price="21000">
-                                <i data-lucide="plus"></i>
+                        <li class="item-sold-out">
+                            <span class="item-name">Sobrebarriga dorada <span class="sold-out-badge">Agotado</span></span>
+                            <button class="btn-add-fast btn-add-cart disabled" data-name="Sobrebarriga dorada" data-price="21000" disabled aria-disabled="true">
+                                <i data-lucide="slash"></i>
                             </button>
                         </li>
                         <li>
@@ -742,7 +748,7 @@
     </footer>
 
     <!-- JS Logic -->
-    <script src="index.js?v=174"></script>
+    <script src="index.js?v=175"></script>
     <script>
         // Initialize Icons
         if (window.lucide) {
