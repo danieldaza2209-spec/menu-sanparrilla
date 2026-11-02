@@ -10,15 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="index.css?v=184">
-    <link rel="icon" type="image/png" href="logo.png?v=184">
+    <link rel="stylesheet" href="index.css?v=185">
+    <link rel="icon" type="image/png" href="logo.png?v=185">
 </head>
 <body>
     <!-- Navigation Header -->
     <header class="app-header">
         <div class="header-container">
             <a href="#" class="brand" aria-label="San Parrilla - Inicio">
-                <img src="logo.png?v=184" alt="San Parrilla Logo" class="brand-logo">
+                <img src="logo.png?v=185" alt="San Parrilla Logo" class="brand-logo">
                 <div class="brand-text">
                     <span class="brand-name">SAN <span class="accent">PARRILLA</span></span>
                     <span class="brand-tagline">Sazón &amp; Fogón</span>
@@ -77,7 +77,7 @@
                         <ul class="special-list" id="daily-principles-display">
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
-                                <span>Ensalada tropical</span>
+                                <span>Ensalada semi-rusa</span>
                             </li>
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
@@ -101,7 +101,11 @@
                         <ul class="special-list" id="daily-sides-display">
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
-                                <span>Papa en salsa criolla</span>
+                                <span>Puré de papa</span>
+                            </li>
+                            <li>
+                                <i data-lucide="check" class="check-icon"></i>
+                                <span>Chips de plátano verde</span>
                             </li>
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
@@ -139,16 +143,16 @@
                                 <i data-lucide="plus"></i>
                             </button>
                         </li>
-                        <li>
-                            <span class="item-name">Pernil frito</span>
-                            <button class="btn-add-fast btn-add-cart" data-name="Pernil frito" data-price="16500">
-                                <i data-lucide="plus"></i>
+                        <li class="item-sold-out">
+                            <span class="item-name">Pernil frito <span class="sold-out-badge">Agotado</span></span>
+                            <button class="btn-add-fast btn-add-cart disabled" data-name="Pernil frito" data-price="16500" disabled aria-disabled="true">
+                                <i data-lucide="slash"></i>
                             </button>
                         </li>
-                        <li>
-                            <span class="item-name">Pernil bbq</span>
-                            <button class="btn-add-fast btn-add-cart" data-name="Pernil bbq" data-price="16500">
-                                <i data-lucide="plus"></i>
+                        <li class="item-sold-out">
+                            <span class="item-name">Pernil bbq <span class="sold-out-badge">Agotado</span></span>
+                            <button class="btn-add-fast btn-add-cart disabled" data-name="Pernil bbq" data-price="16500" disabled aria-disabled="true">
+                                <i data-lucide="slash"></i>
                             </button>
                         </li>
                         <li>
@@ -220,10 +224,10 @@
                                 <i data-lucide="plus"></i>
                             </button>
                         </li>
-                        <li>
-                            <span class="item-name">Pernil hawaiano</span>
-                            <button class="btn-add-fast btn-add-cart" data-name="Pernil hawaiano" data-price="17500">
-                                <i data-lucide="plus"></i>
+                        <li class="item-sold-out">
+                            <span class="item-name">Pernil hawaiano <span class="sold-out-badge">Agotado</span></span>
+                            <button class="btn-add-fast btn-add-cart disabled" data-name="Pernil hawaiano" data-price="17500" disabled aria-disabled="true">
+                                <i data-lucide="slash"></i>
                             </button>
                         </li>
                         <li>
@@ -742,7 +746,7 @@
     </footer>
 
     <!-- JS Logic -->
-    <script src="index.js?v=184"></script>
+    <script src="index.js?v=185"></script>
     <script>
         // Initialize Icons
         if (window.lucide) {
