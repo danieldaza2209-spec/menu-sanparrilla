@@ -10,15 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="index.css?v=185">
-    <link rel="icon" type="image/png" href="logo.png?v=185">
+    <link rel="stylesheet" href="index.css?v=186">
+    <link rel="icon" type="image/png" href="logo.png?v=186">
 </head>
 <body>
     <!-- Navigation Header -->
     <header class="app-header">
         <div class="header-container">
             <a href="#" class="brand" aria-label="San Parrilla - Inicio">
-                <img src="logo.png?v=185" alt="San Parrilla Logo" class="brand-logo">
+                <img src="logo.png?v=186" alt="San Parrilla Logo" class="brand-logo">
                 <div class="brand-text">
                     <span class="brand-name">SAN <span class="accent">PARRILLA</span></span>
                     <span class="brand-tagline">Sazón &amp; Fogón</span>
@@ -63,7 +63,7 @@
                     </div>
                     <div class="special-card-body">
                         <h3>SOPA DEL DÍA</h3>
-                        <div class="special-highlight" id="daily-soup-display">Sancocho</div>
+                        <div class="special-highlight" id="daily-soup-display">Campesina</div>
                     </div>
                 </div>
 
@@ -77,15 +77,15 @@
                         <ul class="special-list" id="daily-principles-display">
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
-                                <span>Ensalada semi-rusa</span>
+                                <span>Ensalada de atún</span>
+                            </li>
+                            <li>
+                                <i data-lucide="check" class="check-icon"></i>
+                                <span>Garbanzos rancheros</span>
                             </li>
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
                                 <span>Fríjoles caseros</span>
-                            </li>
-                            <li>
-                                <i data-lucide="check" class="check-icon"></i>
-                                <span>Espaguetis</span>
                             </li>
                         </ul>
                     </div>
@@ -101,11 +101,11 @@
                         <ul class="special-list" id="daily-sides-display">
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
-                                <span>Puré de papa</span>
+                                <span>Francesas caseras</span>
                             </li>
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
-                                <span>Chips de plátano verde</span>
+                                <span>Maduro pícaro</span>
                             </li>
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
@@ -143,16 +143,16 @@
                                 <i data-lucide="plus"></i>
                             </button>
                         </li>
-                        <li class="item-sold-out">
-                            <span class="item-name">Pernil frito <span class="sold-out-badge">Agotado</span></span>
-                            <button class="btn-add-fast btn-add-cart disabled" data-name="Pernil frito" data-price="16500" disabled aria-disabled="true">
-                                <i data-lucide="slash"></i>
+                        <li>
+                            <span class="item-name">Pernil frito</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Pernil frito" data-price="16500">
+                                <i data-lucide="plus"></i>
                             </button>
                         </li>
-                        <li class="item-sold-out">
-                            <span class="item-name">Pernil bbq <span class="sold-out-badge">Agotado</span></span>
-                            <button class="btn-add-fast btn-add-cart disabled" data-name="Pernil bbq" data-price="16500" disabled aria-disabled="true">
-                                <i data-lucide="slash"></i>
+                        <li>
+                            <span class="item-name">Pernil bbq</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Pernil bbq" data-price="16500">
+                                <i data-lucide="plus"></i>
                             </button>
                         </li>
                         <li>
@@ -174,6 +174,25 @@
                             </button>
                         </li>
                     </ul>
+                    
+                    <!-- Sección Especial: Solo por hoy -->
+                    <div class="special-day-box">
+                        <span class="special-day-badge">⭐ SOLO POR HOY</span>
+                        <ul class="tier-items-list special-items-list">
+                            <li>
+                                <span class="item-name">Chuleta en chimichurri</span>
+                                <button class="btn-add-fast btn-add-cart" data-name="Chuleta en chimichurri" data-price="16500">
+                                    <i data-lucide="plus"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <span class="item-name">Lomo en salsa bechamel</span>
+                                <button class="btn-add-fast btn-add-cart" data-name="Lomo en salsa bechamel" data-price="16500">
+                                    <i data-lucide="plus"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Tier 2: $17.500 -->
@@ -224,10 +243,10 @@
                                 <i data-lucide="plus"></i>
                             </button>
                         </li>
-                        <li class="item-sold-out">
-                            <span class="item-name">Pernil hawaiano <span class="sold-out-badge">Agotado</span></span>
-                            <button class="btn-add-fast btn-add-cart disabled" data-name="Pernil hawaiano" data-price="17500" disabled aria-disabled="true">
-                                <i data-lucide="slash"></i>
+                        <li>
+                            <span class="item-name">Pernil hawaiano</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Pernil hawaiano" data-price="17500">
+                                <i data-lucide="plus"></i>
                             </button>
                         </li>
                         <li>
@@ -299,37 +318,20 @@
                                 <i data-lucide="plus"></i>
                             </button>
                         </li>
-                        <li>
-                            <span class="item-name">Sancocho de gallina</span>
-                            <button class="btn-add-fast btn-add-cart" data-name="Sancocho de gallina" data-price="18000">
-                                <i data-lucide="plus"></i>
-                            </button>
-                        </li>
-                        <li>
-                            <span class="item-name">Espaguetis con pollo</span>
-                            <button class="btn-add-fast btn-add-cart" data-name="Espaguetis con pollo" data-price="18000">
-                                <i data-lucide="plus"></i>
-                            </button>
-                        </li>
-                        <li>
-                            <span class="item-name">Espaguetis boloñesa</span>
-                            <button class="btn-add-fast btn-add-cart" data-name="Espaguetis boloñesa" data-price="18000">
-                                <i data-lucide="plus"></i>
-                            </button>
-                        </li>
-                        <li>
-                            <span class="item-name">Arroz con pollo</span>
-                            <button class="btn-add-fast btn-add-cart" data-name="Arroz con pollo" data-price="18000">
-                                <i data-lucide="plus"></i>
-                            </button>
-                        </li>
-                        <li>
-                            <span class="item-name">Arroz campesino</span>
-                            <button class="btn-add-fast btn-add-cart" data-name="Arroz campesino" data-price="18000">
-                                <i data-lucide="plus"></i>
-                            </button>
-                        </li>
                     </ul>
+
+                    <!-- Sección Especial: Solo por hoy -->
+                    <div class="special-day-box">
+                        <span class="special-day-badge">⭐ SOLO LOS MARTES</span>
+                        <ul class="tier-items-list special-items-list">
+                            <li>
+                                <span class="item-name">Arroz mixto</span>
+                                <button class="btn-add-fast btn-add-cart" data-name="Arroz mixto" data-price="18000">
+                                    <i data-lucide="plus"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- Tier 4: $21.000 -->
@@ -338,10 +340,10 @@
                         <span class="tier-price">$21.000</span>
                     </div>
                     <ul class="tier-items-list">
-                        <li>
-                            <span class="item-name">Sobrebarriga dorada</span>
-                            <button class="btn-add-fast btn-add-cart" data-name="Sobrebarriga dorada" data-price="21000">
-                                <i data-lucide="plus"></i>
+                        <li class="item-sold-out">
+                            <span class="item-name">Sobrebarriga dorada <span class="sold-out-badge">Agotado</span></span>
+                            <button class="btn-add-fast btn-add-cart disabled" data-name="Sobrebarriga dorada" data-price="21000" disabled aria-disabled="true">
+                                <i data-lucide="slash"></i>
                             </button>
                         </li>
                         <li>
@@ -746,7 +748,7 @@
     </footer>
 
     <!-- JS Logic -->
-    <script src="index.js?v=185"></script>
+    <script src="index.js?v=186"></script>
     <script>
         // Initialize Icons
         if (window.lucide) {
