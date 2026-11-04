@@ -10,15 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="index.css?v=187">
-    <link rel="icon" type="image/png" href="logo.png?v=187">
+    <link rel="stylesheet" href="index.css?v=188">
+    <link rel="icon" type="image/png" href="logo.png?v=188">
 </head>
 <body>
     <!-- Navigation Header -->
     <header class="app-header">
         <div class="header-container">
             <a href="#" class="brand" aria-label="San Parrilla - Inicio">
-                <img src="logo.png?v=187" alt="San Parrilla Logo" class="brand-logo">
+                <img src="logo.png?v=188" alt="San Parrilla Logo" class="brand-logo">
                 <div class="brand-text">
                     <span class="brand-name">SAN <span class="accent">PARRILLA</span></span>
                     <span class="brand-tagline">Sazón &amp; Fogón</span>
@@ -63,7 +63,7 @@
                     </div>
                     <div class="special-card-body">
                         <h3>SOPA DEL DÍA</h3>
-                        <div class="special-highlight" id="daily-soup-display">Campesina</div>
+                        <div class="special-highlight" id="daily-soup-display">Plátano</div>
                     </div>
                 </div>
 
@@ -77,11 +77,11 @@
                         <ul class="special-list" id="daily-principles-display">
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
-                                <span>Ensalada de atún</span>
+                                <span>Verduras en crema de leche</span>
                             </li>
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
-                                <span>Garbanzos rancheros</span>
+                                <span>Espaguetis</span>
                             </li>
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
@@ -101,11 +101,11 @@
                         <ul class="special-list" id="daily-sides-display">
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
-                                <span>Francesas caseras</span>
+                                <span>Chips de plátano verde</span>
                             </li>
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
-                                <span>Maduro pícaro</span>
+                                <span>Torta de zanahoria</span>
                             </li>
                             <li>
                                 <i data-lucide="check" class="check-icon"></i>
@@ -167,10 +167,10 @@
                                 <i data-lucide="plus"></i>
                             </button>
                         </li>
-                        <li class="item-sold-out">
-                            <span class="item-name">Chuleta de cerdo <span class="sold-out-badge">Agotado</span></span>
-                            <button class="btn-add-fast btn-add-cart disabled" data-name="Chuleta de cerdo" data-price="16500" disabled aria-disabled="true">
-                                <i data-lucide="slash"></i>
+                        <li>
+                            <span class="item-name">Chuleta de cerdo</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Chuleta de cerdo" data-price="16500">
+                                <i data-lucide="plus"></i>
                             </button>
                         </li>
                     </ul>
@@ -180,8 +180,14 @@
                         <span class="special-day-badge">⭐ SOLO POR HOY</span>
                         <ul class="tier-items-list special-items-list">
                             <li>
-                                <span class="item-name">Lomo en salsa bechamel</span>
-                                <button class="btn-add-fast btn-add-cart" data-name="Lomo en salsa bechamel" data-price="16500">
+                                <span class="item-name">Albóndigas en salsa napolitana</span>
+                                <button class="btn-add-fast btn-add-cart" data-name="Albóndigas en salsa napolitana" data-price="16500">
+                                    <i data-lucide="plus"></i>
+                                </button>
+                            </li>
+                            <li>
+                                <span class="item-name">Lomo a la mostaza</span>
+                                <button class="btn-add-fast btn-add-cart" data-name="Lomo a la mostaza" data-price="16500">
                                     <i data-lucide="plus"></i>
                                 </button>
                             </li>
@@ -255,16 +261,16 @@
                                 <i data-lucide="plus"></i>
                             </button>
                         </li>
-                        <li class="item-sold-out">
-                            <span class="item-name">Chuleta de cerdo al ajillo <span class="sold-out-badge">Agotado</span></span>
-                            <button class="btn-add-fast btn-add-cart disabled" data-name="Chuleta de cerdo al ajillo" data-price="17500" disabled aria-disabled="true">
-                                <i data-lucide="slash"></i>
+                        <li>
+                            <span class="item-name">Chuleta de cerdo al ajillo</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Chuleta de cerdo al ajillo" data-price="17500">
+                                <i data-lucide="plus"></i>
                             </button>
                         </li>
-                        <li class="item-sold-out">
-                            <span class="item-name">Chuleta de cerdo a la bbq <span class="sold-out-badge">Agotado</span></span>
-                            <button class="btn-add-fast btn-add-cart disabled" data-name="Chuleta de cerdo a la bbq" data-price="17500" disabled aria-disabled="true">
-                                <i data-lucide="slash"></i>
+                        <li>
+                            <span class="item-name">Chuleta de cerdo a la bbq</span>
+                            <button class="btn-add-fast btn-add-cart" data-name="Chuleta de cerdo a la bbq" data-price="17500">
+                                <i data-lucide="plus"></i>
                             </button>
                         </li>
                     </ul>
@@ -316,11 +322,11 @@
 
                     <!-- Sección Especial: Solo por hoy -->
                     <div class="special-day-box">
-                        <span class="special-day-badge">⭐ SOLO LOS MARTES</span>
+                        <span class="special-day-badge">⭐ SOLO LOS MIÉRCOLES</span>
                         <ul class="tier-items-list special-items-list">
                             <li>
-                                <span class="item-name">Arroz mixto</span>
-                                <button class="btn-add-fast btn-add-cart" data-name="Arroz mixto" data-price="18000">
+                                <span class="item-name">Espaguetis con pollo</span>
+                                <button class="btn-add-fast btn-add-cart" data-name="Espaguetis con pollo" data-price="18000">
                                     <i data-lucide="plus"></i>
                                 </button>
                             </li>
@@ -742,7 +748,7 @@
     </footer>
 
     <!-- JS Logic -->
-    <script src="index.js?v=187"></script>
+    <script src="index.js?v=188"></script>
     <script>
         // Initialize Icons
         if (window.lucide) {
